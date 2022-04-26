@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		968A472228183B4C00491FD6 /* SCBookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A472128183B4C00491FD6 /* SCBookApp.swift */; };
+		968A472428183B4C00491FD6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A472328183B4C00491FD6 /* ContentView.swift */; };
+		968A472628183B4D00491FD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968A472528183B4D00491FD6 /* Assets.xcassets */; };
+		968A472928183B4D00491FD6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968A472828183B4D00491FD6 /* Preview Assets.xcassets */; };
+		968A473328183B4D00491FD6 /* SCBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A473228183B4D00491FD6 /* SCBookTests.swift */; };
+		968A473D28183B4D00491FD6 /* SCBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A473C28183B4D00491FD6 /* SCBookUITests.swift */; };
+		968A473F28183B4D00491FD6 /* SCBookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A473E28183B4D00491FD6 /* SCBookUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		968A472F28183B4D00491FD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 968A471628183B4C00491FD6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 968A471D28183B4C00491FD6;
+			remoteInfo = SCBook;
+		};
+		968A473928183B4D00491FD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 968A471628183B4C00491FD6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 968A471D28183B4C00491FD6;
+			remoteInfo = SCBook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		968A471E28183B4C00491FD6 /* SCBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		968A472128183B4C00491FD6 /* SCBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCBookApp.swift; sourceTree = "<group>"; };
+		968A472328183B4C00491FD6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		968A472528183B4D00491FD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		968A472828183B4D00491FD6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		968A472E28183B4D00491FD6 /* SCBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		968A473228183B4D00491FD6 /* SCBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCBookTests.swift; sourceTree = "<group>"; };
+		968A473828183B4D00491FD6 /* SCBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		968A473C28183B4D00491FD6 /* SCBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCBookUITests.swift; sourceTree = "<group>"; };
+		968A473E28183B4D00491FD6 /* SCBookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCBookUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		968A471B28183B4C00491FD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		968A472B28183B4D00491FD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		968A473528183B4D00491FD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		968A471528183B4C00491FD6 = {
+			isa = PBXGroup;
+			children = (
+				968A472028183B4C00491FD6 /* SCBook */,
+				968A473128183B4D00491FD6 /* SCBookTests */,
+				968A473B28183B4D00491FD6 /* SCBookUITests */,
+				968A471F28183B4C00491FD6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		968A471F28183B4C00491FD6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				968A471E28183B4C00491FD6 /* SCBook.app */,
+				968A472E28183B4D00491FD6 /* SCBookTests.xctest */,
+				968A473828183B4D00491FD6 /* SCBookUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		968A472028183B4C00491FD6 /* SCBook */ = {
+			isa = PBXGroup;
+			children = (
+				968A472128183B4C00491FD6 /* SCBookApp.swift */,
+				968A472328183B4C00491FD6 /* ContentView.swift */,
+				968A472528183B4D00491FD6 /* Assets.xcassets */,
+				968A472728183B4D00491FD6 /* Preview Content */,
+			);
+			path = SCBook;
+			sourceTree = "<group>";
+		};
+		968A472728183B4D00491FD6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				968A472828183B4D00491FD6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		968A473128183B4D00491FD6 /* SCBookTests */ = {
+			isa = PBXGroup;
+			children = (
+				968A473228183B4D00491FD6 /* SCBookTests.swift */,
+			);
+			path = SCBookTests;
+			sourceTree = "<group>";
+		};
+		968A473B28183B4D00491FD6 /* SCBookUITests */ = {
+			isa = PBXGroup;
+			children = (
+				968A473C28183B4D00491FD6 /* SCBookUITests.swift */,
+				968A473E28183B4D00491FD6 /* SCBookUITestsLaunchTests.swift */,
+			);
+			path = SCBookUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		968A471D28183B4C00491FD6 /* SCBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 968A474228183B4D00491FD6 /* Build configuration list for PBXNativeTarget "SCBook" */;
+			buildPhases = (
+				968A471A28183B4C00491FD6 /* Sources */,
+				968A471B28183B4C00491FD6 /* Frameworks */,
+				968A471C28183B4C00491FD6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SCBook;
+			productName = SCBook;
+			productReference = 968A471E28183B4C00491FD6 /* SCBook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		968A472D28183B4D00491FD6 /* SCBookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 968A474528183B4D00491FD6 /* Build configuration list for PBXNativeTarget "SCBookTests" */;
+			buildPhases = (
+				968A472A28183B4D00491FD6 /* Sources */,
+				968A472B28183B4D00491FD6 /* Frameworks */,
+				968A472C28183B4D00491FD6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				968A473028183B4D00491FD6 /* PBXTargetDependency */,
+			);
+			name = SCBookTests;
+			productName = SCBookTests;
+			productReference = 968A472E28183B4D00491FD6 /* SCBookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		968A473728183B4D00491FD6 /* SCBookUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 968A474828183B4D00491FD6 /* Build configuration list for PBXNativeTarget "SCBookUITests" */;
+			buildPhases = (
+				968A473428183B4D00491FD6 /* Sources */,
+				968A473528183B4D00491FD6 /* Frameworks */,
+				968A473628183B4D00491FD6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				968A473A28183B4D00491FD6 /* PBXTargetDependency */,
+			);
+			name = SCBookUITests;
+			productName = SCBookUITests;
+			productReference = 968A473828183B4D00491FD6 /* SCBookUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		968A471628183B4C00491FD6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					968A471D28183B4C00491FD6 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					968A472D28183B4D00491FD6 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 968A471D28183B4C00491FD6;
+					};
+					968A473728183B4D00491FD6 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 968A471D28183B4C00491FD6;
+					};
+				};
+			};
+			buildConfigurationList = 968A471928183B4C00491FD6 /* Build configuration list for PBXProject "SCBook" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 968A471528183B4C00491FD6;
+			productRefGroup = 968A471F28183B4C00491FD6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				968A471D28183B4C00491FD6 /* SCBook */,
+				968A472D28183B4D00491FD6 /* SCBookTests */,
+				968A473728183B4D00491FD6 /* SCBookUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		968A471C28183B4C00491FD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				968A472928183B4D00491FD6 /* Preview Assets.xcassets in Resources */,
+				968A472628183B4D00491FD6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		968A472C28183B4D00491FD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		968A473628183B4D00491FD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		968A471A28183B4C00491FD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				968A472428183B4C00491FD6 /* ContentView.swift in Sources */,
+				968A472228183B4C00491FD6 /* SCBookApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		968A472A28183B4D00491FD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				968A473328183B4D00491FD6 /* SCBookTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		968A473428183B4D00491FD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				968A473D28183B4D00491FD6 /* SCBookUITests.swift in Sources */,
+				968A473F28183B4D00491FD6 /* SCBookUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		968A473028183B4D00491FD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 968A471D28183B4C00491FD6 /* SCBook */;
+			targetProxy = 968A472F28183B4D00491FD6 /* PBXContainerItemProxy */;
+		};
+		968A473A28183B4D00491FD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 968A471D28183B4C00491FD6 /* SCBook */;
+			targetProxy = 968A473928183B4D00491FD6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		968A474028183B4D00491FD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		968A474128183B4D00491FD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		968A474328183B4D00491FD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SCBook/Preview Content\"";
+				DEVELOPMENT_TEAM = B2RV52W8G3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftist.SCBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		968A474428183B4D00491FD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SCBook/Preview Content\"";
+				DEVELOPMENT_TEAM = B2RV52W8G3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftist.SCBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		968A474628183B4D00491FD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B2RV52W8G3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftist.SCBookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SCBook.app/SCBook";
+			};
+			name = Debug;
+		};
+		968A474728183B4D00491FD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B2RV52W8G3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftist.SCBookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SCBook.app/SCBook";
+			};
+			name = Release;
+		};
+		968A474928183B4D00491FD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B2RV52W8G3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftist.SCBookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SCBook;
+			};
+			name = Debug;
+		};
+		968A474A28183B4D00491FD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B2RV52W8G3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftist.SCBookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SCBook;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		968A471928183B4C00491FD6 /* Build configuration list for PBXProject "SCBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				968A474028183B4D00491FD6 /* Debug */,
+				968A474128183B4D00491FD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		968A474228183B4D00491FD6 /* Build configuration list for PBXNativeTarget "SCBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				968A474328183B4D00491FD6 /* Debug */,
+				968A474428183B4D00491FD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		968A474528183B4D00491FD6 /* Build configuration list for PBXNativeTarget "SCBookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				968A474628183B4D00491FD6 /* Debug */,
+				968A474728183B4D00491FD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		968A474828183B4D00491FD6 /* Build configuration list for PBXNativeTarget "SCBookUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				968A474928183B4D00491FD6 /* Debug */,
+				968A474A28183B4D00491FD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 968A471628183B4C00491FD6 /* Project object */;
+}
