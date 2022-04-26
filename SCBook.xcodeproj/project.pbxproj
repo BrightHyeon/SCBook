@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9667B602281854260011C988 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667B601281854260011C988 /* OnboardingView.swift */; };
+		9667B604281863790011C988 /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667B603281863790011C988 /* Wave.swift */; };
+		9667B607281868EE0011C988 /* WaveDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667B606281868EE0011C988 /* WaveDraw.swift */; };
+		9667B609281869450011C988 /* Wave2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667B608281869450011C988 /* Wave2.swift */; };
 		968A472228183B4C00491FD6 /* SCBookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A472128183B4C00491FD6 /* SCBookApp.swift */; };
 		968A472428183B4C00491FD6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A472328183B4C00491FD6 /* ContentView.swift */; };
 		968A472628183B4D00491FD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968A472528183B4D00491FD6 /* Assets.xcassets */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9667B601281854260011C988 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		9667B603281863790011C988 /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
+		9667B606281868EE0011C988 /* WaveDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveDraw.swift; sourceTree = "<group>"; };
+		9667B608281869450011C988 /* Wave2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave2.swift; sourceTree = "<group>"; };
 		968A471E28183B4C00491FD6 /* SCBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968A472128183B4C00491FD6 /* SCBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCBookApp.swift; sourceTree = "<group>"; };
 		968A472328183B4C00491FD6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +79,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9667B605281868DF0011C988 /* Wave */ = {
+			isa = PBXGroup;
+			children = (
+				9667B603281863790011C988 /* Wave.swift */,
+				9667B608281869450011C988 /* Wave2.swift */,
+				9667B606281868EE0011C988 /* WaveDraw.swift */,
+			);
+			path = Wave;
+			sourceTree = "<group>";
+		};
 		968A471528183B4C00491FD6 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +114,8 @@
 			children = (
 				968A472128183B4C00491FD6 /* SCBookApp.swift */,
 				968A472328183B4C00491FD6 /* ContentView.swift */,
+				9667B601281854260011C988 /* OnboardingView.swift */,
+				9667B605281868DF0011C988 /* Wave */,
 				968A472528183B4D00491FD6 /* Assets.xcassets */,
 				968A472728183B4D00491FD6 /* Preview Content */,
 			);
@@ -257,6 +277,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9667B607281868EE0011C988 /* WaveDraw.swift in Sources */,
+				9667B604281863790011C988 /* Wave.swift in Sources */,
+				9667B602281854260011C988 /* OnboardingView.swift in Sources */,
+				9667B609281869450011C988 /* Wave2.swift in Sources */,
 				968A472428183B4C00491FD6 /* ContentView.swift in Sources */,
 				968A472228183B4C00491FD6 /* SCBookApp.swift in Sources */,
 			);
