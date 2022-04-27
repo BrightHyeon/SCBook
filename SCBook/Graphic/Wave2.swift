@@ -17,6 +17,7 @@ struct Wave2: View {
                     endPoint: UnitPoint(x: 0.5, y: 0.9999999999999999))
         .mask(WaveDraw().frame(width: 800, height: 500))
 //        .frame(width: 800, height: 500)
+        //줘야할 상황이있음. 그냥 해보고 frame짤린다싶으면 이거하면됨.
         //그림의 frame과 실제 갖는 공간의 frame을 동일하게 설정.
         //MARK: 내 Try; 바로 위코드를 주석처리해보니까, 직접 실제 View에 적용할 때 굳이 overlay로 안해도되게됨.
         .offset(x: 0, y: 300) //offset조절.

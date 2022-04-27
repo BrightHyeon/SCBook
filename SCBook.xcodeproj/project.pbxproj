@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9667B602281854260011C988 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667B601281854260011C988 /* OnboardingView.swift */; };
+		9667B602281854260011C988 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667B601281854260011C988 /* Onboarding.swift */; };
 		9667B604281863790011C988 /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667B603281863790011C988 /* Wave.swift */; };
 		9667B607281868EE0011C988 /* WaveDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667B606281868EE0011C988 /* WaveDraw.swift */; };
 		9667B609281869450011C988 /* Wave2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667B608281869450011C988 /* Wave2.swift */; };
@@ -18,6 +18,17 @@
 		968A473328183B4D00491FD6 /* SCBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A473228183B4D00491FD6 /* SCBookTests.swift */; };
 		968A473D28183B4D00491FD6 /* SCBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A473C28183B4D00491FD6 /* SCBookUITests.swift */; };
 		968A473F28183B4D00491FD6 /* SCBookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A473E28183B4D00491FD6 /* SCBookUITestsLaunchTests.swift */; };
+		9693630A2818EE8700D10081 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 969363092818EE8700D10081 /* SwiftUIX */; };
+		969363142818FF9800D10081 /* FaceDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969363132818FF9800D10081 /* FaceDraw.swift */; };
+		969363162818FFC200D10081 /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969363152818FFC200D10081 /* Face.swift */; };
+		969363182819075100D10081 /* LineDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969363172819075100D10081 /* LineDraw.swift */; };
+		9693631A281907CE00D10081 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96936319281907CE00D10081 /* Line.swift */; };
+		9693631C281907DA00D10081 /* Line2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693631B281907DA00D10081 /* Line2.swift */; };
+		9693632028190C8900D10081 /* Curve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693631F28190C8900D10081 /* Curve.swift */; };
+		9693632228190D4400D10081 /* CurveDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693632128190D4400D10081 /* CurveDraw.swift */; };
+		9693632428190EE000D10081 /* StarDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693632328190EE000D10081 /* StarDraw.swift */; };
+		9693632628190EEE00D10081 /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693632528190EEE00D10081 /* Stars.swift */; };
+		96936328281912B900D10081 /* Planets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96936327281912B900D10081 /* Planets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9667B601281854260011C988 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		9667B601281854260011C988 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		9667B603281863790011C988 /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 		9667B606281868EE0011C988 /* WaveDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveDraw.swift; sourceTree = "<group>"; };
 		9667B608281869450011C988 /* Wave2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave2.swift; sourceTree = "<group>"; };
@@ -52,6 +63,16 @@
 		968A473828183B4D00491FD6 /* SCBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		968A473C28183B4D00491FD6 /* SCBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCBookUITests.swift; sourceTree = "<group>"; };
 		968A473E28183B4D00491FD6 /* SCBookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCBookUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		969363132818FF9800D10081 /* FaceDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDraw.swift; sourceTree = "<group>"; };
+		969363152818FFC200D10081 /* Face.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
+		969363172819075100D10081 /* LineDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineDraw.swift; sourceTree = "<group>"; };
+		96936319281907CE00D10081 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		9693631B281907DA00D10081 /* Line2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line2.swift; sourceTree = "<group>"; };
+		9693631F28190C8900D10081 /* Curve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curve.swift; sourceTree = "<group>"; };
+		9693632128190D4400D10081 /* CurveDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveDraw.swift; sourceTree = "<group>"; };
+		9693632328190EE000D10081 /* StarDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarDraw.swift; sourceTree = "<group>"; };
+		9693632528190EEE00D10081 /* Stars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stars.swift; sourceTree = "<group>"; };
+		96936327281912B900D10081 /* Planets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9693630A2818EE8700D10081 /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,14 +101,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9667B605281868DF0011C988 /* Wave */ = {
+		9667B605281868DF0011C988 /* Graphic */ = {
 			isa = PBXGroup;
 			children = (
 				9667B603281863790011C988 /* Wave.swift */,
 				9667B608281869450011C988 /* Wave2.swift */,
 				9667B606281868EE0011C988 /* WaveDraw.swift */,
+				969363152818FFC200D10081 /* Face.swift */,
+				969363132818FF9800D10081 /* FaceDraw.swift */,
+				96936319281907CE00D10081 /* Line.swift */,
+				9693631B281907DA00D10081 /* Line2.swift */,
+				969363172819075100D10081 /* LineDraw.swift */,
+				9693631F28190C8900D10081 /* Curve.swift */,
+				9693632128190D4400D10081 /* CurveDraw.swift */,
+				9693632528190EEE00D10081 /* Stars.swift */,
+				9693632328190EE000D10081 /* StarDraw.swift */,
+				96936327281912B900D10081 /* Planets.swift */,
 			);
-			path = Wave;
+			path = Graphic;
 			sourceTree = "<group>";
 		};
 		968A471528183B4C00491FD6 = {
@@ -114,8 +146,8 @@
 			children = (
 				968A472128183B4C00491FD6 /* SCBookApp.swift */,
 				968A472328183B4C00491FD6 /* ContentView.swift */,
-				9667B601281854260011C988 /* OnboardingView.swift */,
-				9667B605281868DF0011C988 /* Wave */,
+				9667B601281854260011C988 /* Onboarding.swift */,
+				9667B605281868DF0011C988 /* Graphic */,
 				968A472528183B4D00491FD6 /* Assets.xcassets */,
 				968A472728183B4D00491FD6 /* Preview Content */,
 			);
@@ -163,6 +195,9 @@
 			dependencies = (
 			);
 			name = SCBook;
+			packageProductDependencies = (
+				969363092818EE8700D10081 /* SwiftUIX */,
+			);
 			productName = SCBook;
 			productReference = 968A471E28183B4C00491FD6 /* SCBook.app */;
 			productType = "com.apple.product-type.application";
@@ -235,6 +270,9 @@
 				Base,
 			);
 			mainGroup = 968A471528183B4C00491FD6;
+			packageReferences = (
+				969363082818EE8700D10081 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+			);
 			productRefGroup = 968A471F28183B4C00491FD6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -277,12 +315,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				969363182819075100D10081 /* LineDraw.swift in Sources */,
+				9693632628190EEE00D10081 /* Stars.swift in Sources */,
+				9693632028190C8900D10081 /* Curve.swift in Sources */,
 				9667B607281868EE0011C988 /* WaveDraw.swift in Sources */,
 				9667B604281863790011C988 /* Wave.swift in Sources */,
-				9667B602281854260011C988 /* OnboardingView.swift in Sources */,
+				9693632228190D4400D10081 /* CurveDraw.swift in Sources */,
+				9667B602281854260011C988 /* Onboarding.swift in Sources */,
+				969363142818FF9800D10081 /* FaceDraw.swift in Sources */,
+				969363162818FFC200D10081 /* Face.swift in Sources */,
 				9667B609281869450011C988 /* Wave2.swift in Sources */,
 				968A472428183B4C00491FD6 /* ContentView.swift in Sources */,
+				9693631C281907DA00D10081 /* Line2.swift in Sources */,
 				968A472228183B4C00491FD6 /* SCBookApp.swift in Sources */,
+				9693631A281907CE00D10081 /* Line.swift in Sources */,
+				9693632428190EE000D10081 /* StarDraw.swift in Sources */,
+				96936328281912B900D10081 /* Planets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +655,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		969363082818EE8700D10081 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		969363092818EE8700D10081 /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 969363082818EE8700D10081 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 968A471628183B4C00491FD6 /* Project object */;
 }
