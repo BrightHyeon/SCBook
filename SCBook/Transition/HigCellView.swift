@@ -24,7 +24,6 @@ struct HigCellView: View {
                     .matchedGeometryEffect(id: "subtitle", in: namespace)
                 Text("Let's see Human Interface Guidelines!")
                     .font(.footnote.weight(.semibold))
-                    .matchedGeometryEffect(id: "text", in: namespace)
             }
             .padding(20)
             .background {
