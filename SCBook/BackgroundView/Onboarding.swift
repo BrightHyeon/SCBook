@@ -10,6 +10,7 @@ import SwiftUIX
 
 struct Onboarding: View {
     
+    @StateObject var cd = ColorDict()
     @State var selection = 0
     @State var wave: Bool = false
     
@@ -18,8 +19,8 @@ struct Onboarding: View {
             background
             
             TabView(selection: $selection) {
-                OnboardingView(selection: $selection).tag(0)
-                OnboardingView(selection: $selection).tag(1)
+                OnboardingView(cd: cd, selection: $selection).tag(0)
+                OnboardingView(cd: cd, selection: $selection).tag(1)
             }
             .tabViewStyle(PageTabViewStyle()) //Nice!
             //pageControl과 유사한 형태.x
@@ -34,12 +35,7 @@ struct Onboarding: View {
     
     var background: some View { //이렇게 따로 뺀 후에 body에 추가가능.
         ZStack {
-            LinearGradient(
-                gradient: Gradient(stops: [
-                    .init(color: Color(#colorLiteral(red: 1, green: 0.5833333730697632, blue: 0.9833333492279053, alpha: 1)), location: 0),
-                    .init(color: Color(#colorLiteral(red: 0.22892358899116516, green: 0.0164930522441864, blue: 0.3958333432674408, alpha: 1)), location: 1)]),
-                startPoint: UnitPoint(x: 0.5, y: -3.0616171314629196e-17),
-                endPoint: UnitPoint(x: 0.5, y: 0.9999999999999999))
+            cd.colors["onboardBackground"]
             .ignoresSafeArea()
             //아래와 같은 효과.
             //.edgesIgnoringSafeArea(.all)
@@ -101,6 +97,7 @@ struct Onboarding_Previews: PreviewProvider {
 
 struct OnboardingView: View {
     
+    @ObservedObject var cd: ColorDict
     @EnvironmentObject var startOnboard: StartOnboard
     @Binding var selection: Int
     
@@ -113,13 +110,7 @@ struct OnboardingView: View {
                     .fontWeight(.semibold)
                     .foregroundColor(.white.opacity(0.7))
                 
-                LinearGradient(
-                    gradient: Gradient(stops: [
-                        .init(color: Color(#colorLiteral(red: 0.8703334331512451, green: 0.6183333396911621, blue: 0.9333333373069763, alpha: 1)), location: 0),
-                        .init(color: Color(#colorLiteral(red: 0.7204166650772095, green: 0.7433750033378601, blue: 0.949999988079071, alpha: 1)), location: 0.4791666567325592),
-                        .init(color: Color(#colorLiteral(red: 0.5936805605888367, green: 0.7471791505813599, blue: 0.8583333492279053, alpha: 0.8100000023841858)), location: 1)]),
-                    startPoint: UnitPoint(x: 6.22425467642394e-9, y: 0.5007257086104584),
-                    endPoint: UnitPoint(x: 1.0000000062242533, y: 0.5007256838410408))
+                cd.colors["onboardText"]
                 .frame(height: 140) //frame지정해줘야함.
                 .mask{
                     Text("SwiftUI \nCollection \nBook")
@@ -136,12 +127,7 @@ struct OnboardingView: View {
             }
             .padding(30)
             //figma에서 만든 여러 Components를 SwiftUI Inspector를 이용하여 code추출할 수 있는데 아래 Linear도 그런방식으로 가져옴.
-            .background(LinearGradient(
-                gradient: Gradient(stops: [
-                    .init(color: Color(#colorLiteral(red: 0.12969449162483215, green: 0.05347222089767456, blue: 0.2916666567325592, alpha: 1)), location: 0),
-                    .init(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)), location: 1)]),
-                startPoint: UnitPoint(x: 0.5, y: -3.0616171314629196e-17),
-                endPoint: UnitPoint(x: 0.5, y: 0.9999999999999999)))
+            .background(cd.colors["onboardingView"])
             .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
             //둘은 받는 전달인자타입이 다름. mask는 ()->View 즉, View를 반환하는 모든 요소를 받고, clipShape는 Shape를 받음.
             //.clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
@@ -149,21 +135,12 @@ struct OnboardingView: View {
             //circular를 쓰고, stroke을 주면 선이 좀 일그러지는 느낌을 본적있을 것! continuous에는 그런것없음.
             //MARK: Stroke 오버레이하는 타이밍 주의. 순서에 따라 바뀌니!
             .overlay(RoundedRectangle(cornerRadius: 30, style: .continuous)
-                .stroke(LinearGradient(
-                    gradient: Gradient(stops: [
-                        .init(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5)), location: 0),
-                        .init(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)), location: 1)]),
-                    startPoint: UnitPoint(x: 0.5, y: -3.0616171314629196e-17),
-                    endPoint: UnitPoint(x: 0.5, y: 0.9999999999999999)), lineWidth: 1)
+                .stroke(
+                    cd.colors["onboardStroke"]!, lineWidth: 1)
                     .blendMode(.overlay)
                     .overlay( //한번 더 오버레이하고,
                         RoundedRectangle(cornerRadius: 30, style: .continuous)
-                            .stroke(LinearGradient(
-                                gradient: Gradient(stops: [
-                                    .init(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5)), location: 0),
-                                    .init(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)), location: 1)]),
-                                startPoint: UnitPoint(x: 0.5, y: -3.0616171314629196e-17),
-                                endPoint: UnitPoint(x: 0.5, y: 0.9999999999999999)), lineWidth: 3)
+                            .stroke(cd.colors["onboardStroke"]!, lineWidth: 3)
                             .blur(radius: 10)
                         //이번엔 blur를 주면, 좀 더 glow적인 느낌연출됨.
                             )
@@ -190,16 +167,11 @@ struct OnboardingView: View {
                             Text("Continue")
                                 .font(.largeTitle)
                                 .bold()
-                                .foregroundStyle(LinearGradient(colors: [Color.purple.opacity(0.9), Color.pink.opacity(0.9)], startPoint: .topLeading, endPoint: .bottomTrailing))
+                                .foregroundStyle(cd.colors["continueText"]!)
                                 .padding()
                         }
                         .padding(10)
-                        .background(LinearGradient(
-                            gradient: Gradient(stops: [
-                                .init(color: Color.white.opacity(0.7), location: 0),
-                                .init(color: Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), location: 1)]),
-                            startPoint: UnitPoint(x: 0.5, y: -3.0616171314629196e-17),
-                            endPoint: UnitPoint(x: 0.5, y: 0.9999999999999999)), in: RoundedRectangle(cornerRadius: 12, style: .continuous)
+                        .background(cd.colors["continueBackground"]!, in: RoundedRectangle(cornerRadius: 12, style: .continuous)
                         )
                     }
                 }

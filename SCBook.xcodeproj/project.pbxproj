@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96060166281AE9D800BA0257 /* ColorDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96060165281AE9D800BA0257 /* ColorDict.swift */; };
 		9667B602281854260011C988 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667B601281854260011C988 /* Onboarding.swift */; };
 		9667B604281863790011C988 /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667B603281863790011C988 /* Wave.swift */; };
 		9667B607281868EE0011C988 /* WaveDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667B606281868EE0011C988 /* WaveDraw.swift */; };
@@ -67,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		96060165281AE9D800BA0257 /* ColorDict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDict.swift; sourceTree = "<group>"; };
 		9667B601281854260011C988 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		9667B603281863790011C988 /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 		9667B606281868EE0011C988 /* WaveDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveDraw.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 			children = (
 				96AD32BF281A3CAA006BF27C /* ListModel.swift */,
 				96AD32C1281A3CDD006BF27C /* ListViewModel.swift */,
+				96060165281AE9D800BA0257 /* ColorDict.swift */,
 				96AD32C3281A42CB006BF27C /* LinkEnum.swift */,
 			);
 			path = Entities;
@@ -524,6 +527,7 @@
 				9693631A281907CE00D10081 /* Line.swift in Sources */,
 				96B0FD25281A7B09001FC040 /* CloudDraw.swift in Sources */,
 				9693632428190EE000D10081 /* StarDraw.swift in Sources */,
+				96060166281AE9D800BA0257 /* ColorDict.swift in Sources */,
 				9693633228192B1100D10081 /* MyVStack.swift in Sources */,
 				96B0FD2C281A80C0001FC040 /* Orange.swift in Sources */,
 				96B0FD1E281A7255001FC040 /* FaceJeju.swift in Sources */,

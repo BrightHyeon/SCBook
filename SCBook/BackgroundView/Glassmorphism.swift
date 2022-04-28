@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Glassmorphism: View {
     
+    @StateObject var cd = ColorDict()
     @State private var appear = false
     
     var body: some View {
@@ -20,7 +21,9 @@ struct Glassmorphism: View {
                 Text("Glassmorphism")
                     .font(.largeTitle)
                     .bold()
-                    .foregroundStyle(LinearGradient(colors: [Color.purple.opacity(0.9), Color.pink.opacity(0.9)], startPoint: .topLeading, endPoint: .bottomTrailing))
+                    .foregroundStyle(
+                        cd.colors["continueText"]!
+                    )
                     .padding()
             }
             .padding()

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HIGView: View {
     
+    @ObservedObject var cd: ColorDict
     var namespace: Namespace.ID
     @Binding var show: Bool
     
@@ -23,15 +24,7 @@ struct HIGView: View {
             }
             .ignoresSafeArea()
             .background(
-                AngularGradient(
-                    gradient: Gradient(stops: [
-                        .init(color: Color(#colorLiteral(red: 0.9541666507720947, green: 0.6599652767181396, blue: 0.6599652767181396, alpha: 1)), location: 0.14326532185077667),
-                        .init(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), location: 0.4985717535018921),
-                        .init(color: Color(#colorLiteral(red: 0.9541666507720947, green: 0.6599652767181396, blue: 0.6599652767181396, alpha: 1)), location: 0.8701561689376831),
-                        .init(color: Color(#colorLiteral(red: 0.9041666388511658, green: 0.4596180319786072, blue: 0.4596180319786072, alpha: 1)), location: 0.9971840381622314)]),
-                    center: UnitPoint(x: 0.4999999056591794, y: 0.5000000405261534),
-                    angle: .init(degrees: 45)
-                )
+                cd.background
             )
             
             
@@ -104,6 +97,6 @@ struct HIGView_Previews: PreviewProvider {
     @Namespace static var namespace
     
     static var previews: some View {
-        HIGView(namespace: namespace, show: .constant(true))
+        HIGView(cd: ColorDict(), namespace: namespace, show: .constant(true))
     }
 }
