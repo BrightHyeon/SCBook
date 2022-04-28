@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9667B602281854260011C988 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667B601281854260011C988 /* Onboarding.swift */; };
+		9667B604281863790011C988 /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667B603281863790011C988 /* Wave.swift */; };
+		9667B607281868EE0011C988 /* WaveDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667B606281868EE0011C988 /* WaveDraw.swift */; };
+		9667B609281869450011C988 /* Wave2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667B608281869450011C988 /* Wave2.swift */; };
 		968A472228183B4C00491FD6 /* SCBookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A472128183B4C00491FD6 /* SCBookApp.swift */; };
 		968A472428183B4C00491FD6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A472328183B4C00491FD6 /* ContentView.swift */; };
 		968A472628183B4D00491FD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968A472528183B4D00491FD6 /* Assets.xcassets */; };
@@ -14,6 +18,30 @@
 		968A473328183B4D00491FD6 /* SCBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A473228183B4D00491FD6 /* SCBookTests.swift */; };
 		968A473D28183B4D00491FD6 /* SCBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A473C28183B4D00491FD6 /* SCBookUITests.swift */; };
 		968A473F28183B4D00491FD6 /* SCBookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A473E28183B4D00491FD6 /* SCBookUITestsLaunchTests.swift */; };
+		9693630A2818EE8700D10081 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 969363092818EE8700D10081 /* SwiftUIX */; };
+		969363142818FF9800D10081 /* FaceDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969363132818FF9800D10081 /* FaceDraw.swift */; };
+		969363162818FFC200D10081 /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969363152818FFC200D10081 /* Face.swift */; };
+		969363182819075100D10081 /* LineDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969363172819075100D10081 /* LineDraw.swift */; };
+		9693631A281907CE00D10081 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96936319281907CE00D10081 /* Line.swift */; };
+		9693631C281907DA00D10081 /* Line2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693631B281907DA00D10081 /* Line2.swift */; };
+		9693632028190C8900D10081 /* Curve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693631F28190C8900D10081 /* Curve.swift */; };
+		9693632228190D4400D10081 /* CurveDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693632128190D4400D10081 /* CurveDraw.swift */; };
+		9693632428190EE000D10081 /* StarDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693632328190EE000D10081 /* StarDraw.swift */; };
+		9693632628190EEE00D10081 /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693632528190EEE00D10081 /* Stars.swift */; };
+		96936328281912B900D10081 /* Planets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96936327281912B900D10081 /* Planets.swift */; };
+		9693632C2819244300D10081 /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693632B2819244300D10081 /* MainListView.swift */; };
+		9693633228192B1100D10081 /* MyVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693633128192B1100D10081 /* MyVStack.swift */; };
+		9693633428192C7600D10081 /* FontModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693633328192C7600D10081 /* FontModifiers.swift */; };
+		96936336281938E700D10081 /* GradientText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96936335281938E700D10081 /* GradientText.swift */; };
+		9693633B28193A9500D10081 /* Glassmorphism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693633A28193A9500D10081 /* Glassmorphism.swift */; };
+		96A38B852819A19C00720CB8 /* MoonSky.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 96A38B842819A19C00720CB8 /* MoonSky.mp4 */; };
+		96A38B872819A25500720CB8 /* LoopingPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A38B862819A25500720CB8 /* LoopingPlayer.swift */; };
+		96A38B8A2819A8C900720CB8 /* TransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A38B892819A8C900720CB8 /* TransitionView.swift */; };
+		96AD32C0281A3CAA006BF27C /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AD32BF281A3CAA006BF27C /* ListModel.swift */; };
+		96AD32C2281A3CDD006BF27C /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AD32C1281A3CDD006BF27C /* ListViewModel.swift */; };
+		96AD32C4281A42CB006BF27C /* LinkEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AD32C3281A42CB006BF27C /* LinkEnum.swift */; };
+		96AD32C6281A46F9006BF27C /* HigCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AD32C5281A46F8006BF27C /* HigCellView.swift */; };
+		96AD32C8281A4CD6006BF27C /* HIGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AD32C7281A4CD6006BF27C /* HIGView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +62,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9667B601281854260011C988 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		9667B603281863790011C988 /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
+		9667B606281868EE0011C988 /* WaveDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveDraw.swift; sourceTree = "<group>"; };
+		9667B608281869450011C988 /* Wave2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave2.swift; sourceTree = "<group>"; };
 		968A471E28183B4C00491FD6 /* SCBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968A472128183B4C00491FD6 /* SCBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCBookApp.swift; sourceTree = "<group>"; };
 		968A472328183B4C00491FD6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +76,29 @@
 		968A473828183B4D00491FD6 /* SCBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		968A473C28183B4D00491FD6 /* SCBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCBookUITests.swift; sourceTree = "<group>"; };
 		968A473E28183B4D00491FD6 /* SCBookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCBookUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		969363132818FF9800D10081 /* FaceDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDraw.swift; sourceTree = "<group>"; };
+		969363152818FFC200D10081 /* Face.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
+		969363172819075100D10081 /* LineDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineDraw.swift; sourceTree = "<group>"; };
+		96936319281907CE00D10081 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		9693631B281907DA00D10081 /* Line2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line2.swift; sourceTree = "<group>"; };
+		9693631F28190C8900D10081 /* Curve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curve.swift; sourceTree = "<group>"; };
+		9693632128190D4400D10081 /* CurveDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveDraw.swift; sourceTree = "<group>"; };
+		9693632328190EE000D10081 /* StarDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarDraw.swift; sourceTree = "<group>"; };
+		9693632528190EEE00D10081 /* Stars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stars.swift; sourceTree = "<group>"; };
+		96936327281912B900D10081 /* Planets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planets.swift; sourceTree = "<group>"; };
+		9693632B2819244300D10081 /* MainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListView.swift; sourceTree = "<group>"; };
+		9693633128192B1100D10081 /* MyVStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVStack.swift; sourceTree = "<group>"; };
+		9693633328192C7600D10081 /* FontModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontModifiers.swift; sourceTree = "<group>"; };
+		96936335281938E700D10081 /* GradientText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientText.swift; sourceTree = "<group>"; };
+		9693633A28193A9500D10081 /* Glassmorphism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glassmorphism.swift; sourceTree = "<group>"; };
+		96A38B842819A19C00720CB8 /* MoonSky.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoonSky.mp4; sourceTree = "<group>"; };
+		96A38B862819A25500720CB8 /* LoopingPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopingPlayer.swift; sourceTree = "<group>"; };
+		96A38B892819A8C900720CB8 /* TransitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionView.swift; sourceTree = "<group>"; };
+		96AD32BF281A3CAA006BF27C /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		96AD32C1281A3CDD006BF27C /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		96AD32C3281A42CB006BF27C /* LinkEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkEnum.swift; sourceTree = "<group>"; };
+		96AD32C5281A46F8006BF27C /* HigCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HigCellView.swift; sourceTree = "<group>"; };
+		96AD32C7281A4CD6006BF27C /* HIGView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIGView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9693630A2818EE8700D10081 /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +127,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9667B605281868DF0011C988 /* Graphic */ = {
+			isa = PBXGroup;
+			children = (
+				9693632928191D1400D10081 /* ForOnboarding */,
+			);
+			path = Graphic;
+			sourceTree = "<group>";
+		};
 		968A471528183B4C00491FD6 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +160,15 @@
 			children = (
 				968A472128183B4C00491FD6 /* SCBookApp.swift */,
 				968A472328183B4C00491FD6 /* ContentView.swift */,
+				96B0FD1A281A69B7001FC040 /* Views */,
+				96A38B882819A8B800720CB8 /* Transition */,
+				9693632A28191D2B00D10081 /* BackgroundView */,
+				96936337281939D400D10081 /* TextStyle */,
+				9693633828193A4200D10081 /* ViewBuilder */,
+				9693633928193A5900D10081 /* ViewModifier */,
+				9667B605281868DF0011C988 /* Graphic */,
+				96AD32BE281A3C7D006BF27C /* Entities */,
+				96A38B832819A17200720CB8 /* Assets */,
 				968A472528183B4D00491FD6 /* Assets.xcassets */,
 				968A472728183B4D00491FD6 /* Preview Content */,
 			);
@@ -127,6 +200,96 @@
 			path = SCBookUITests;
 			sourceTree = "<group>";
 		};
+		9693632928191D1400D10081 /* ForOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				9667B603281863790011C988 /* Wave.swift */,
+				9667B608281869450011C988 /* Wave2.swift */,
+				9667B606281868EE0011C988 /* WaveDraw.swift */,
+				969363152818FFC200D10081 /* Face.swift */,
+				969363132818FF9800D10081 /* FaceDraw.swift */,
+				96936319281907CE00D10081 /* Line.swift */,
+				9693631B281907DA00D10081 /* Line2.swift */,
+				969363172819075100D10081 /* LineDraw.swift */,
+				9693631F28190C8900D10081 /* Curve.swift */,
+				9693632128190D4400D10081 /* CurveDraw.swift */,
+				9693632528190EEE00D10081 /* Stars.swift */,
+				9693632328190EE000D10081 /* StarDraw.swift */,
+				96936327281912B900D10081 /* Planets.swift */,
+			);
+			path = ForOnboarding;
+			sourceTree = "<group>";
+		};
+		9693632A28191D2B00D10081 /* BackgroundView */ = {
+			isa = PBXGroup;
+			children = (
+				9667B601281854260011C988 /* Onboarding.swift */,
+				9693633A28193A9500D10081 /* Glassmorphism.swift */,
+				96A38B862819A25500720CB8 /* LoopingPlayer.swift */,
+			);
+			path = BackgroundView;
+			sourceTree = "<group>";
+		};
+		96936337281939D400D10081 /* TextStyle */ = {
+			isa = PBXGroup;
+			children = (
+				96936335281938E700D10081 /* GradientText.swift */,
+			);
+			path = TextStyle;
+			sourceTree = "<group>";
+		};
+		9693633828193A4200D10081 /* ViewBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				9693633128192B1100D10081 /* MyVStack.swift */,
+			);
+			path = ViewBuilder;
+			sourceTree = "<group>";
+		};
+		9693633928193A5900D10081 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				9693633328192C7600D10081 /* FontModifiers.swift */,
+			);
+			path = ViewModifier;
+			sourceTree = "<group>";
+		};
+		96A38B832819A17200720CB8 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				96A38B842819A19C00720CB8 /* MoonSky.mp4 */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		96A38B882819A8B800720CB8 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				96A38B892819A8C900720CB8 /* TransitionView.swift */,
+				96AD32C5281A46F8006BF27C /* HigCellView.swift */,
+				96AD32C7281A4CD6006BF27C /* HIGView.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		96AD32BE281A3C7D006BF27C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				96AD32BF281A3CAA006BF27C /* ListModel.swift */,
+				96AD32C1281A3CDD006BF27C /* ListViewModel.swift */,
+				96AD32C3281A42CB006BF27C /* LinkEnum.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		96B0FD1A281A69B7001FC040 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9693632B2819244300D10081 /* MainListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +306,9 @@
 			dependencies = (
 			);
 			name = SCBook;
+			packageProductDependencies = (
+				969363092818EE8700D10081 /* SwiftUIX */,
+			);
 			productName = SCBook;
 			productReference = 968A471E28183B4C00491FD6 /* SCBook.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +381,9 @@
 				Base,
 			);
 			mainGroup = 968A471528183B4C00491FD6;
+			packageReferences = (
+				969363082818EE8700D10081 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+			);
 			productRefGroup = 968A471F28183B4C00491FD6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				968A472928183B4D00491FD6 /* Preview Assets.xcassets in Resources */,
+				96A38B852819A19C00720CB8 /* MoonSky.mp4 in Resources */,
 				968A472628183B4D00491FD6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,8 +427,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				969363182819075100D10081 /* LineDraw.swift in Sources */,
+				9693632628190EEE00D10081 /* Stars.swift in Sources */,
+				9693632028190C8900D10081 /* Curve.swift in Sources */,
+				9667B607281868EE0011C988 /* WaveDraw.swift in Sources */,
+				9667B604281863790011C988 /* Wave.swift in Sources */,
+				9693632228190D4400D10081 /* CurveDraw.swift in Sources */,
+				9667B602281854260011C988 /* Onboarding.swift in Sources */,
+				969363142818FF9800D10081 /* FaceDraw.swift in Sources */,
+				969363162818FFC200D10081 /* Face.swift in Sources */,
+				9667B609281869450011C988 /* Wave2.swift in Sources */,
+				96A38B8A2819A8C900720CB8 /* TransitionView.swift in Sources */,
+				96936336281938E700D10081 /* GradientText.swift in Sources */,
+				9693633B28193A9500D10081 /* Glassmorphism.swift in Sources */,
+				9693633428192C7600D10081 /* FontModifiers.swift in Sources */,
 				968A472428183B4C00491FD6 /* ContentView.swift in Sources */,
+				96AD32C2281A3CDD006BF27C /* ListViewModel.swift in Sources */,
+				96AD32C4281A42CB006BF27C /* LinkEnum.swift in Sources */,
+				96AD32C0281A3CAA006BF27C /* ListModel.swift in Sources */,
+				9693631C281907DA00D10081 /* Line2.swift in Sources */,
+				96AD32C8281A4CD6006BF27C /* HIGView.swift in Sources */,
+				96AD32C6281A46F9006BF27C /* HigCellView.swift in Sources */,
 				968A472228183B4C00491FD6 /* SCBookApp.swift in Sources */,
+				9693631A281907CE00D10081 /* Line.swift in Sources */,
+				9693632428190EE000D10081 /* StarDraw.swift in Sources */,
+				9693633228192B1100D10081 /* MyVStack.swift in Sources */,
+				9693632C2819244300D10081 /* MainListView.swift in Sources */,
+				96936328281912B900D10081 /* Planets.swift in Sources */,
+				96A38B872819A25500720CB8 /* LoopingPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +630,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -463,7 +659,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -583,6 +779,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		969363082818EE8700D10081 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		969363092818EE8700D10081 /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 969363082818EE8700D10081 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 968A471628183B4C00491FD6 /* Project object */;
 }
