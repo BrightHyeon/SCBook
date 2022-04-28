@@ -10,7 +10,6 @@ import SwiftUI
 struct HigCellView: View {
     
     var namespace: Namespace.ID
-    @Binding var show: Bool
     
     var body: some View {
         VStack {
@@ -28,13 +27,6 @@ struct HigCellView: View {
                     .matchedGeometryEffect(id: "text", in: namespace)
             }
             .padding(20)
-            //                .background { //영상에서 왜 이렇게 하는거지. 아래랑 같은데...ㅜ
-            //                    Rectangle()
-            //                        .fill(.ultraThinMaterial)
-            //                        .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
-            //                        .blur(radius: 30)
-            //                        .matchedGeometryEffect(id: "blur", in: namespace)
-            //                }
             .background {
                 RoundedRectangle(cornerRadius: 30, style: .continuous)
                     .fill(.ultraThinMaterial)
@@ -62,6 +54,6 @@ struct HigCellView_Previews: PreviewProvider {
     @Namespace static var namespace
     
     static var previews: some View {
-        HigCellView(namespace: namespace, show: .constant(true))
+        HigCellView(namespace: namespace)
     }
 }

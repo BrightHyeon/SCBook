@@ -14,13 +14,18 @@ struct TransitionView: View {
     
     var body: some View {
         ZStack {
-            
             background
             
             ScrollView {
                 
+                Text("Human Interface Guideline".uppercased())
+                    .font(.body.weight(.semibold))
+                    .foregroundColor(.secondary)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, 20)
+                
                 if !show {
-                    HigCellView(namespace: namespace, show: $show)
+                    HigCellView(namespace: namespace)
                         .onTapGesture {
                             withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
                                 show.toggle()
@@ -32,8 +37,9 @@ struct TransitionView: View {
             if show {
                 HIGView(namespace: namespace, show: $show)
             }
-            
         }
+        .navigationTitle("BUTTONS")
+        .navigationBarTitleDisplayMode(.large)
     }
     
     var background: some View {

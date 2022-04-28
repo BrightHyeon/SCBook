@@ -29,10 +29,9 @@ struct MainListView: View {
                         
                         SearchBar("Search...", text: $text).padding(.horizontal, 5)
                         
-                        
                         ForEach(listViewModel.list, id: \.title) { item in
                             NavigationLink {
-                                
+                                TransitionView()
                             } label: {
                                 ListCell(item: item)
                             }
