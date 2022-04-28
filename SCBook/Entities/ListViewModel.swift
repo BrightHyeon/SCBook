@@ -9,18 +9,36 @@ import SwiftUI
 
 class ListViewModel: ObservableObject {
     
-    @Published var list: [ListModel] = [
-        ListModel(image: Image(systemName: "star.fill"), title: "Buttons", introduce: "Enter introduce"),
-        ListModel(image: Image(systemName: "star.fill"), title: "Background", introduce: "Enter introduce"),
-        ListModel(image: Image(systemName: "star.fill"), title: "TextField", introduce: "Enter introduce"),
-        ListModel(image: Image(systemName: "star.fill"), title: "List", introduce: "Enter introduce"),
-        ListModel(image: Image(systemName: "star.fill"), title: "SegmentedBar", introduce: "Enter introduce"),
-        ListModel(image: Image(systemName: "star.fill"), title: "Text", introduce: "Enter introduce"),
-        ListModel(image: Image(systemName: "star.fill"), title: "Image", introduce: "Enter introduce"),
-        ListModel(image: Image(systemName: "star.fill"), title: "Transition", introduce: "Enter introduce"),
-        ListModel(image: Image(systemName: "star.fill"), title: "Stepper", introduce: "Enter introduce")
-    ]
+    //MARK: PROBLEM, QUESTION - @AppStorage가 배열형태는 저장을 못하는 듯함. Bool, Int, Double, URL, Data타입만 저장함. 엥 Data..hmm...
+    
+    @Published var list: [ListModel] = loadJson("dummyList.json")
+        
 }
+
+func loadJson<T: Decodable>(_ filename: String) -> T {
+    
+    let data: Data
+    
+    guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
+    else {
+        fatalError("\(filename) not found.")
+    }
+    
+    do {
+        data = try Data(contentsOf: file)
+    } catch {
+        fatalError("Could not load \(filename): \(error)")
+    }
+    
+    do {
+        return try JSONDecoder().decode(T.self, from: data)
+    } catch {
+        fatalError("Unable to parse \(filename): \(error)")
+    }
+}
+
+
+
 
 class StartOnboard: ObservableObject {
     

@@ -12,6 +12,7 @@ struct TransitionView: View {
     //@Namespace 라는 데코레이터가 생겼고 이를 사용하는 .matchedGeometryEffect(id:, in:) 이 생겼네요. 분명히 다른 뷰인데 서로 같은 셀을 다룬다는걸 알려줘서 셀 자체가 뷰에서 뷰로 이동하는 예제입니다. 굉장하네요!
     @Namespace var namespace
     @State private var show = false
+    var hig: ListModel.HIG?
     
     var body: some View {
         ZStack {
@@ -26,9 +27,9 @@ struct TransitionView: View {
                     .padding(.horizontal, 20)
                 
                 if !show {
-                    HigCellView(namespace: namespace)
+                    HigCellView(hig: hig!, namespace: namespace)
                         .onTapGesture {
-                            withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
+                            withAnimation(.spring(response: 0.6, dampingFraction: 0.6)) {
                                 show.toggle()
                             }
                         }
@@ -36,7 +37,7 @@ struct TransitionView: View {
             }
             
             if show {
-                HIGView(cd: cd, namespace: namespace, show: $show)
+                HIGView(hig: hig!, cd: cd, namespace: namespace, show: $show)
             }
         }
         .navigationTitle("BUTTONS")
@@ -50,8 +51,9 @@ struct TransitionView: View {
 }
 
 struct TransitionView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        TransitionView()
+        TransitionView(hig: ListViewModel().list[0].hig)
     }
 }
 

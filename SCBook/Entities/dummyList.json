@@ -1,0 +1,110 @@
+[
+    {
+        "imageName": "listButton",
+        "title": "Button",
+        "introduce": "You can create variable style of button",
+        "hig": {
+            "imageName": "button",
+            "title": "Button",
+            "subtitle": "Controls",
+            "introduce": "Let's see Human Interface Guidelines!",
+            "description": "The system offers a range of button styles that support extensive customization while providing built-in interaction states, accessibility support, and appearance adaptation. In addition, there are several system-defined button types — such as toggle, pop-up, and pull-down — that support a variety of specific use cases."
+        }
+    },
+    {
+        "imageName": "listBackground",
+        "title": "Background",
+        "introduce": "There are variable concepts of background",
+        "hig": {
+            "imageName": "button",
+            "title": "Background",
+            "subtitle": "blabla",
+            "introduce": "Let's see Human Interface Guidelines!",
+            "description": "The system offers a range of button styles that support extensive customization while providing built-in interaction states, accessibility support, and appearance adaptation. In addition, there are several system-defined button types — such as toggle, pop-up, and pull-down — that support a variety of specific use cases."
+        }
+    },
+    {
+        "imageName": "listTextField",
+        "title": "TextField",
+        "introduce": "clear button & watch button in Field",
+        "hig": {
+            "imageName": "button",
+            "title": "TextField",
+            "subtitle": "blabla",
+            "introduce": "Let's see Human Interface Guidelines!",
+            "description": "The system offers a range of button styles that support extensive customization while providing built-in interaction states, accessibility support, and appearance adaptation. In addition, there are several system-defined button types — such as toggle, pop-up, and pull-down — that support a variety of specific use cases."
+        }
+    },
+    {
+        "imageName": "listlist",
+        "title": "List",
+        "introduce": "Basic ~ Custom style of list",
+        "hig": {
+            "imageName": "button",
+            "title": "List",
+            "subtitle": "blabla",
+            "introduce": "Let's see Human Interface Guidelines!",
+            "description": "The system offers a range of button styles that support extensive customization while providing built-in interaction states, accessibility support, and appearance adaptation. In addition, there are several system-defined button types — such as toggle, pop-up, and pull-down — that support a variety of specific use cases."
+        }
+    },
+    {
+        "imageName": "listSegmentedBar",
+        "title": "SegmentedBar",
+        "introduce": "Amazing segmentedBar styles",
+        "hig": {
+            "imageName": "button",
+            "title": "SegmentedBar",
+            "subtitle": "blabla",
+            "introduce": "Let's see Human Interface Guidelines!",
+            "description": "The system offers a range of button styles that support extensive customization while providing built-in interaction states, accessibility support, and appearance adaptation. In addition, there are several system-defined button types — such as toggle, pop-up, and pull-down — that support a variety of specific use cases."
+        }
+    },
+    {
+        "imageName": "listText",
+        "title": "Text",
+        "introduce": "font & fontWeight & mask & custom fonts",
+        "hig": {
+            "imageName": "button",
+            "title": "Text",
+            "subtitle": "blabla",
+            "introduce": "Let's see Human Interface Guidelines!",
+            "description": "The system offers a range of button styles that support extensive customization while providing built-in interaction states, accessibility support, and appearance adaptation. In addition, there are several system-defined button types — such as toggle, pop-up, and pull-down — that support a variety of specific use cases."
+        }
+    },
+    {
+        "imageName": "listImage",
+        "title": "Image",
+        "introduce": "Check about image's HIG",
+        "hig": {
+            "imageName": "button",
+            "title": "Image",
+            "subtitle": "blabla",
+            "introduce": "Let's see Human Interface Guidelines!",
+            "description": "The system offers a range of button styles that support extensive customization while providing built-in interaction states, accessibility support, and appearance adaptation. In addition, there are several system-defined button types — such as toggle, pop-up, and pull-down — that support a variety of specific use cases."
+        }
+    },
+    {
+        "imageName": "listStepper",
+        "title": "Stepper",
+        "introduce": "Let's make custom style of stepper",
+        "hig": {
+            "imageName": "button",
+            "title": "Stepper",
+            "subtitle": "blabla",
+            "introduce": "Let's see Human Interface Guidelines!",
+            "description": "The system offers a range of button styles that support extensive customization while providing built-in interaction states, accessibility support, and appearance adaptation. In addition, there are several system-defined button types — such as toggle, pop-up, and pull-down — that support a variety of specific use cases."
+        }
+    },
+    {
+        "imageName": "listColor",
+        "title": "Color",
+        "introduce": "Precautions when dealing with color",
+        "hig": {
+            "imageName": "button",
+            "title": "Color",
+            "subtitle": "blabla",
+            "introduce": "Let's see Human Interface Guidelines!",
+            "description": "The system offers a range of button styles that support extensive customization while providing built-in interaction states, accessibility support, and appearance adaptation. In addition, there are several system-defined button types — such as toggle, pop-up, and pull-down — that support a variety of specific use cases."
+        }
+    }
+]

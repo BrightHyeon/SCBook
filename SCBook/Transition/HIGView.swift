@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HIGView: View {
     
+    var hig: ListModel.HIG
     @ObservedObject var cd: ColorDict
     var namespace: Namespace.ID
     @Binding var show: Bool
@@ -18,7 +19,7 @@ struct HIGView: View {
             ScrollView {
                 cover
                 
-                Text("The system offers a range of button styles that support extensive customization while providing built-in interaction states, accessibility support, and appearance adaptation. In addition, there are several system-defined button types — such as toggle, pop-up, and pull-down — that support a variety of specific use cases.")
+                Text(hig.description)
                     .font(.body.weight(.semibold))
                     .padding()
             }
@@ -29,7 +30,7 @@ struct HIGView: View {
             
             
             Button {
-                withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
+                withAnimation(.spring(response: 0.6, dampingFraction: 0.6)) {
                     show.toggle()
                 }
             } label: {
@@ -58,7 +59,7 @@ struct HIGView: View {
             .frame(height: 300)
             .foregroundStyle(.black)
             .background(
-                Image("Button")
+                Image(hig.imageName)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .matchedGeometryEffect(id: "image", in: namespace)
@@ -69,11 +70,11 @@ struct HIGView: View {
             )
             .overlay(
                 VStack(alignment: .leading, spacing: 12) {
-                    Text("Buttons")
+                    Text(hig.title)
                         .font(.largeTitle.weight(.bold))
                         .matchedGeometryEffect(id: "title", in: namespace)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    Text("Controls")
+                    Text(hig.subtitle)
                         .font(.body.weight(.semibold))
                         .matchedGeometryEffect(id: "subtitle", in: namespace)
                 }
@@ -97,6 +98,6 @@ struct HIGView_Previews: PreviewProvider {
     @Namespace static var namespace
     
     static var previews: some View {
-        HIGView(cd: ColorDict(), namespace: namespace, show: .constant(true))
+        HIGView(hig: ListViewModel().list[0].hig!, cd: ColorDict(), namespace: namespace, show: .constant(true))
     }
 }

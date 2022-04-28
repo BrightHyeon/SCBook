@@ -8,5 +8,5 @@
 import SwiftUI
 
 enum LinkEnum {
-    
+    //enum + @ViewBuilder 용.
 }

@@ -8,13 +8,9 @@
 import SwiftUI
 import SwiftUIX
 
-enum ListCase {
-    case button
-    case background
-    case textField
-}
-
 struct MainListView: View {
+    
+    @EnvironmentObject var startOnboard: StartOnboard
     
     @StateObject var listViewModel = ListViewModel()
     @StateObject var cd = ColorDict()
@@ -30,9 +26,12 @@ struct MainListView: View {
                         
                         SearchBar("Search...", text: $text).padding(.horizontal, 5)
                         
+                        //index와 item을 동시에 빼줄수도있음... 단, Array로 한번더 덮어줘야하나봄.
+//                        ForEach(Array(listViewModel.list.enumerated()), id: \.offset) { index, item in
                         ForEach(listViewModel.list, id: \.title) { item in
                             NavigationLink {
-                                TransitionView()
+                                //실제 코드적용할 땐 enum case hashig인 애들만 여기로 전송할 것임.
+                                TransitionView(hig: item.hig)
                             } label: {
                                 ListCell(cd: cd, item: item)
                             }
@@ -41,6 +40,17 @@ struct MainListView: View {
                 }
             }
             .navigationTitle("SCBook")
+            .toolbar {
+                ToolbarItem(placement: .automatic) {
+                    Button {
+                        startOnboard.isCountinue = false
+                    } label: {
+                        Image(systemName: "info.circle")
+                            .font(.title3, weight: .bold)
+                            .foregroundColor(.primary)
+                    }
+                }
+            }
         }
     }
     
@@ -90,5 +100,6 @@ struct ListCell: View {
 struct MainListView_Previews: PreviewProvider {
     static var previews: some View {
         MainListView()
+            .environmentObject(StartOnboard())
     }
 }
