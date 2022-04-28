@@ -29,3 +29,16 @@ struct Wave2_Previews: PreviewProvider {
         Wave2()
     }
 }
+
+struct BlueWave2: View {
+    var body: some View {
+        LinearGradient(
+                    gradient: Gradient(stops: [
+                .init(color: Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)), location: 0),
+                .init(color: Color(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)), location: 1)]),
+                    startPoint: UnitPoint(x: 0.5, y: -3.0616171314629196e-17),
+                    endPoint: UnitPoint(x: 0.5, y: 0.9999999999999999))
+        .mask(WaveDraw().frame(width: 800, height: 500))
+        .offset(x: 0, y: 300)
+    }
+}

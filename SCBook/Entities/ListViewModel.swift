@@ -21,3 +21,9 @@ class ListViewModel: ObservableObject {
         ListModel(image: Image(systemName: "star.fill"), title: "Stepper", introduce: "Enter introduce")
     ]
 }
+
+class StartOnboard: ObservableObject {
+    
+    @AppStorage("isContinue") var isCountinue: Bool = false
+    
+}

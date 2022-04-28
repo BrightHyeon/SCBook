@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct SCBookApp: App {
+    
+    let startOnboard = StartOnboard()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(startOnboard)
         }
     }
 }

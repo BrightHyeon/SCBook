@@ -42,6 +42,11 @@
 		96AD32C4281A42CB006BF27C /* LinkEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AD32C3281A42CB006BF27C /* LinkEnum.swift */; };
 		96AD32C6281A46F9006BF27C /* HigCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AD32C5281A46F8006BF27C /* HigCellView.swift */; };
 		96AD32C8281A4CD6006BF27C /* HIGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AD32C7281A4CD6006BF27C /* HIGView.swift */; };
+		96B0FD1E281A7255001FC040 /* FaceJeju.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B0FD1D281A7255001FC040 /* FaceJeju.swift */; };
+		96B0FD25281A7B09001FC040 /* CloudDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B0FD24281A7B09001FC040 /* CloudDraw.swift */; };
+		96B0FD27281A7B14001FC040 /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B0FD26281A7B14001FC040 /* Cloud.swift */; };
+		96B0FD2A281A80AB001FC040 /* OrangeDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B0FD29281A80AB001FC040 /* OrangeDraw.swift */; };
+		96B0FD2C281A80C0001FC040 /* Orange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B0FD2B281A80C0001FC040 /* Orange.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +104,11 @@
 		96AD32C3281A42CB006BF27C /* LinkEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkEnum.swift; sourceTree = "<group>"; };
 		96AD32C5281A46F8006BF27C /* HigCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HigCellView.swift; sourceTree = "<group>"; };
 		96AD32C7281A4CD6006BF27C /* HIGView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIGView.swift; sourceTree = "<group>"; };
+		96B0FD1D281A7255001FC040 /* FaceJeju.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceJeju.swift; sourceTree = "<group>"; };
+		96B0FD24281A7B09001FC040 /* CloudDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudDraw.swift; sourceTree = "<group>"; };
+		96B0FD26281A7B14001FC040 /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
+		96B0FD29281A80AB001FC040 /* OrangeDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeDraw.swift; sourceTree = "<group>"; };
+		96B0FD2B281A80C0001FC040 /* Orange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orange.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,19 +213,13 @@
 		9693632928191D1400D10081 /* ForOnboarding */ = {
 			isa = PBXGroup;
 			children = (
-				9667B603281863790011C988 /* Wave.swift */,
-				9667B608281869450011C988 /* Wave2.swift */,
-				9667B606281868EE0011C988 /* WaveDraw.swift */,
-				969363152818FFC200D10081 /* Face.swift */,
-				969363132818FF9800D10081 /* FaceDraw.swift */,
-				96936319281907CE00D10081 /* Line.swift */,
-				9693631B281907DA00D10081 /* Line2.swift */,
-				969363172819075100D10081 /* LineDraw.swift */,
-				9693631F28190C8900D10081 /* Curve.swift */,
-				9693632128190D4400D10081 /* CurveDraw.swift */,
-				9693632528190EEE00D10081 /* Stars.swift */,
-				9693632328190EE000D10081 /* StarDraw.swift */,
-				96936327281912B900D10081 /* Planets.swift */,
+				96B0FD21281A78C3001FC040 /* Waves */,
+				96B0FD22281A78CE001FC040 /* Faces */,
+				96B0FD20281A78BA001FC040 /* Lines */,
+				96B0FD23281A78D9001FC040 /* Curves */,
+				96B0FD28281A7D8F001FC040 /* Cloud */,
+				96B0FD2D281A841D001FC040 /* Oranges */,
+				96B0FD2E281A86D7001FC040 /* StarPlanet */,
 			);
 			path = ForOnboarding;
 			sourceTree = "<group>";
@@ -288,6 +292,73 @@
 				9693632B2819244300D10081 /* MainListView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		96B0FD20281A78BA001FC040 /* Lines */ = {
+			isa = PBXGroup;
+			children = (
+				96936319281907CE00D10081 /* Line.swift */,
+				9693631B281907DA00D10081 /* Line2.swift */,
+				969363172819075100D10081 /* LineDraw.swift */,
+			);
+			path = Lines;
+			sourceTree = "<group>";
+		};
+		96B0FD21281A78C3001FC040 /* Waves */ = {
+			isa = PBXGroup;
+			children = (
+				9667B603281863790011C988 /* Wave.swift */,
+				9667B608281869450011C988 /* Wave2.swift */,
+				9667B606281868EE0011C988 /* WaveDraw.swift */,
+			);
+			path = Waves;
+			sourceTree = "<group>";
+		};
+		96B0FD22281A78CE001FC040 /* Faces */ = {
+			isa = PBXGroup;
+			children = (
+				969363152818FFC200D10081 /* Face.swift */,
+				96B0FD1D281A7255001FC040 /* FaceJeju.swift */,
+				969363132818FF9800D10081 /* FaceDraw.swift */,
+			);
+			path = Faces;
+			sourceTree = "<group>";
+		};
+		96B0FD23281A78D9001FC040 /* Curves */ = {
+			isa = PBXGroup;
+			children = (
+				9693631F28190C8900D10081 /* Curve.swift */,
+				9693632128190D4400D10081 /* CurveDraw.swift */,
+			);
+			path = Curves;
+			sourceTree = "<group>";
+		};
+		96B0FD28281A7D8F001FC040 /* Cloud */ = {
+			isa = PBXGroup;
+			children = (
+				96B0FD26281A7B14001FC040 /* Cloud.swift */,
+				96B0FD24281A7B09001FC040 /* CloudDraw.swift */,
+			);
+			path = Cloud;
+			sourceTree = "<group>";
+		};
+		96B0FD2D281A841D001FC040 /* Oranges */ = {
+			isa = PBXGroup;
+			children = (
+				96B0FD2B281A80C0001FC040 /* Orange.swift */,
+				96B0FD29281A80AB001FC040 /* OrangeDraw.swift */,
+			);
+			path = Oranges;
+			sourceTree = "<group>";
+		};
+		96B0FD2E281A86D7001FC040 /* StarPlanet */ = {
+			isa = PBXGroup;
+			children = (
+				96936327281912B900D10081 /* Planets.swift */,
+				9693632528190EEE00D10081 /* Stars.swift */,
+				9693632328190EE000D10081 /* StarDraw.swift */,
+			);
+			path = StarPlanet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,6 +501,7 @@
 				969363182819075100D10081 /* LineDraw.swift in Sources */,
 				9693632628190EEE00D10081 /* Stars.swift in Sources */,
 				9693632028190C8900D10081 /* Curve.swift in Sources */,
+				96B0FD2A281A80AB001FC040 /* OrangeDraw.swift in Sources */,
 				9667B607281868EE0011C988 /* WaveDraw.swift in Sources */,
 				9667B604281863790011C988 /* Wave.swift in Sources */,
 				9693632228190D4400D10081 /* CurveDraw.swift in Sources */,
@@ -450,8 +522,12 @@
 				96AD32C6281A46F9006BF27C /* HigCellView.swift in Sources */,
 				968A472228183B4C00491FD6 /* SCBookApp.swift in Sources */,
 				9693631A281907CE00D10081 /* Line.swift in Sources */,
+				96B0FD25281A7B09001FC040 /* CloudDraw.swift in Sources */,
 				9693632428190EE000D10081 /* StarDraw.swift in Sources */,
 				9693633228192B1100D10081 /* MyVStack.swift in Sources */,
+				96B0FD2C281A80C0001FC040 /* Orange.swift in Sources */,
+				96B0FD1E281A7255001FC040 /* FaceJeju.swift in Sources */,
+				96B0FD27281A7B14001FC040 /* Cloud.swift in Sources */,
 				9693632C2819244300D10081 /* MainListView.swift in Sources */,
 				96936328281912B900D10081 /* Planets.swift in Sources */,
 				96A38B872819A25500720CB8 /* LoopingPlayer.swift in Sources */,
