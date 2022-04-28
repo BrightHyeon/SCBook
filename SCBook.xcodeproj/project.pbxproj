@@ -160,7 +160,7 @@
 			children = (
 				968A472128183B4C00491FD6 /* SCBookApp.swift */,
 				968A472328183B4C00491FD6 /* ContentView.swift */,
-				9693632B2819244300D10081 /* MainListView.swift */,
+				96B0FD1A281A69B7001FC040 /* Views */,
 				96A38B882819A8B800720CB8 /* Transition */,
 				9693632A28191D2B00D10081 /* BackgroundView */,
 				96936337281939D400D10081 /* TextStyle */,
@@ -280,6 +280,14 @@
 				96AD32C3281A42CB006BF27C /* LinkEnum.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		96B0FD1A281A69B7001FC040 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9693632B2819244300D10081 /* MainListView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
