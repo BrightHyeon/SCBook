@@ -30,7 +30,7 @@ struct HigCellView: View {
             .background {
                 RoundedRectangle(cornerRadius: 30, style: .continuous)
                     .fill(.ultraThinMaterial)
-                    .blur(radius: 30)
+                    .blur(radius: 20)
             }
         }
         .foregroundStyle(.primary)

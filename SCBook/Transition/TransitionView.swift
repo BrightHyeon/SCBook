@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TransitionView: View {
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
     @ObservedObject var cd: ColorDict
     //@Namespace 라는 데코레이터가 생겼고 이를 사용하는 .matchedGeometryEffect(id:, in:) 이 생겼네요. 분명히 다른 뷰인데 서로 같은 셀을 다룬다는걸 알려줘서 셀 자체가 뷰에서 뷰로 이동하는 예제입니다. 굉장하네요!
     @Namespace var namespace
@@ -16,7 +17,8 @@ struct TransitionView: View {
     
     var body: some View {
         ZStack {
-            background
+            
+            Theme.backgroundStyle(forScheme: colorScheme)
             
             ScrollView {
                 
@@ -42,11 +44,6 @@ struct TransitionView: View {
         }
         .navigationTitle(hig!.title) //어차피 hig가 nil인 애들은 어차피 여기로 안온다.
         .navigationBarTitleDisplayMode(.large)
-    }
-    
-    var background: some View {
-        cd.background
-        .ignoresSafeArea()
     }
 }
 

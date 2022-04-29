@@ -9,42 +9,60 @@ import SwiftUI
 
 struct HIGView: View {
     
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
     var hig: ListModel.HIG
     @ObservedObject var cd: ColorDict
     var namespace: Namespace.ID
     @Binding var show: Bool
     
     var body: some View {
-        ZStack {
-            ScrollView {
+        //        ZStack {
+        ScrollView {
+            ZStack {
                 cover
                 
-                Text(hig.description)
-                    .font(.body.weight(.semibold))
-                    .padding()
-            }
-            .ignoresSafeArea()
-            .background(
-                cd.background
-            )
-            
-            
-            Button {
-                withAnimation(.spring(response: 0.6, dampingFraction: 0.6)) {
-                    show.toggle()
+                Button {
+                    withAnimation(.spring(response: 0.6, dampingFraction: 0.6)) {
+                        show.toggle()
+                    }
+                } label: {
+                    Image(systemName: "xmark")
+                        .font(.body.weight(.bold))
+                        .foregroundColor(.secondary)
+                        .padding(8)
+                        .background(.ultraThinMaterial, in: Circle())
                 }
-            } label: {
-                Image(systemName: "xmark")
-                    .font(.body.weight(.bold))
-                    .foregroundColor(.secondary)
-                    .padding(8)
-                    .background(.ultraThinMaterial, in: Circle())
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+                .padding(15)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
-            .padding(15)
+            
+            Text(hig.description)
+                .font(.body.weight(.semibold))
+                .padding()
         }
+        .ignoresSafeArea()
+        .background(
+            Theme.backgroundStyle(forScheme: colorScheme)
+        )
+        
+        //MARK: 버튼을 여기 넣는 것보다 위 코드 ScrollView에 묶어야 함께 움직임~!
+        //            Button {
+        //                withAnimation(.spring(response: 0.6, dampingFraction: 0.6)) {
+        //                    show.toggle()
+        //                }
+        //            } label: {
+        //                Image(systemName: "xmark")
+        //                    .font(.body.weight(.bold))
+        //                    .foregroundColor(.secondary)
+        //                    .padding(8)
+        //                    .background(.ultraThinMaterial, in: Circle())
+        //            }
+        //            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+        //            .padding(15)
+        //        }
+        
         .navigationBarBackButtonHidden(true)
-//        .navigationBarHidden(true) //이게 안먹힌다...
+        //        .navigationBarHidden(true) //이게 안먹힌다...
         .navigationTitle("")
         .edgesIgnoringSafeArea(.all)
         .statusBar(hidden: true)

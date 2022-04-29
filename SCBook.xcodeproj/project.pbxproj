@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		96060166281AE9D800BA0257 /* ColorDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96060165281AE9D800BA0257 /* ColorDict.swift */; };
+		962CFE73281C4913001E20DC /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962CFE72281C4913001E20DC /* Theme.swift */; };
 		9633CA40281BA6AE006F1F36 /* BackgroundList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9633CA3F281BA6AE006F1F36 /* BackgroundList.swift */; };
 		9633CA43281BAE7C006F1F36 /* GlassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9633CA42281BAE7C006F1F36 /* GlassCell.swift */; };
 		9667B602281854260011C988 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667B601281854260011C988 /* Onboarding.swift */; };
@@ -51,6 +52,7 @@
 		96B0FD27281A7B14001FC040 /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B0FD26281A7B14001FC040 /* Cloud.swift */; };
 		96B0FD2A281A80AB001FC040 /* OrangeDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B0FD29281A80AB001FC040 /* OrangeDraw.swift */; };
 		96B0FD2C281A80C0001FC040 /* Orange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B0FD2B281A80C0001FC040 /* Orange.swift */; };
+		96BA3DC9281BD34400A8D4DE /* ButtonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA3DC8281BD34400A8D4DE /* ButtonList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,7 @@
 
 /* Begin PBXFileReference section */
 		96060165281AE9D800BA0257 /* ColorDict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDict.swift; sourceTree = "<group>"; };
+		962CFE72281C4913001E20DC /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		9633CA3F281BA6AE006F1F36 /* BackgroundList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundList.swift; sourceTree = "<group>"; };
 		9633CA42281BAE7C006F1F36 /* GlassCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassCell.swift; sourceTree = "<group>"; };
 		9667B601281854260011C988 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
@@ -117,6 +120,7 @@
 		96B0FD26281A7B14001FC040 /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
 		96B0FD29281A80AB001FC040 /* OrangeDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeDraw.swift; sourceTree = "<group>"; };
 		96B0FD2B281A80C0001FC040 /* Orange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orange.swift; sourceTree = "<group>"; };
+		96BA3DC8281BD34400A8D4DE /* ButtonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,8 +200,9 @@
 				968A472128183B4C00491FD6 /* SCBookApp.swift */,
 				968A472328183B4C00491FD6 /* ContentView.swift */,
 				96B0FD1A281A69B7001FC040 /* Views */,
-				96A38B882819A8B800720CB8 /* Transition */,
 				9667B601281854260011C988 /* Onboarding.swift */,
+				96A38B882819A8B800720CB8 /* Transition */,
+				96BA3DC7281BD32A00A8D4DE /* ButtonList */,
 				9693632A28191D2B00D10081 /* BackgroundList */,
 				96936337281939D400D10081 /* TextStyle */,
 				9693633828193A4200D10081 /* ViewBuilder */,
@@ -310,6 +315,7 @@
 				96060165281AE9D800BA0257 /* ColorDict.swift */,
 				96AD32C3281A42CB006BF27C /* LinkEnum.swift */,
 				967933C6281AFF09006E8177 /* dummyList.json */,
+				962CFE72281C4913001E20DC /* Theme.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -387,6 +393,14 @@
 				9693632328190EE000D10081 /* StarDraw.swift */,
 			);
 			path = StarPlanet;
+			sourceTree = "<group>";
+		};
+		96BA3DC7281BD32A00A8D4DE /* ButtonList */ = {
+			isa = PBXGroup;
+			children = (
+				96BA3DC8281BD34400A8D4DE /* ButtonList.swift */,
+			);
+			path = ButtonList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -540,6 +554,7 @@
 				9667B609281869450011C988 /* Wave2.swift in Sources */,
 				96A38B8A2819A8C900720CB8 /* TransitionView.swift in Sources */,
 				96936336281938E700D10081 /* GradientText.swift in Sources */,
+				962CFE73281C4913001E20DC /* Theme.swift in Sources */,
 				9693633B28193A9500D10081 /* Glassmorphism.swift in Sources */,
 				9693633428192C7600D10081 /* FontModifiers.swift in Sources */,
 				968A472428183B4C00491FD6 /* ContentView.swift in Sources */,
@@ -550,6 +565,7 @@
 				96AD32C0281A3CAA006BF27C /* ListModel.swift in Sources */,
 				9693631C281907DA00D10081 /* Line2.swift in Sources */,
 				96AD32C8281A4CD6006BF27C /* HIGView.swift in Sources */,
+				96BA3DC9281BD34400A8D4DE /* ButtonList.swift in Sources */,
 				96AD32C6281A46F9006BF27C /* HigCellView.swift in Sources */,
 				968A472228183B4C00491FD6 /* SCBookApp.swift in Sources */,
 				9693631A281907CE00D10081 /* Line.swift in Sources */,
