@@ -11,11 +11,14 @@ struct Glassmorphism: View {
     
     @StateObject var cd = ColorDict()
     @State private var appear = false
+    var namespace: Namespace.ID
+    @Binding var showGlass: Bool
     
     var body: some View {
         ZStack {
             background
                 .ignoresSafeArea()
+                .matchedGeometryEffect(id: "background", in: namespace)
             
             VStack {
                 Text("Glassmorphism")
@@ -24,9 +27,10 @@ struct Glassmorphism: View {
                     .foregroundStyle(
                         cd.colors["continueText"]!
                     )
+                    .matchedGeometryEffect(id: "title", in: namespace)
                     .padding()
             }
-            .padding()
+            .padding(20)
             .background(LinearGradient(
                 gradient: Gradient(stops: [
                     .init(color: Color.white.opacity(0.4), location: 0),
@@ -34,12 +38,35 @@ struct Glassmorphism: View {
                 startPoint: UnitPoint(x: 0.5, y: -3.0616171314629196e-17),
                 endPoint: UnitPoint(x: 0.5, y: 0.9999999999999999)), in: RoundedRectangle(cornerRadius: 12, style: .continuous)
             )
+            .frame(maxWidth: .infinity) //글씨 오락가락하는거 이걸로 해결.~!
+            .matchedGeometryEffect(id: "stroke", in: namespace)
+            
+            Button {
+                withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
+                    showGlass.toggle()
+                }
+            } label: {
+                Image(systemName: "xmark")
+                    .font(.body.weight(.bold))
+                    .foregroundColor(.secondary)
+                    .padding(8)
+                    .background(.ultraThinMaterial, in: Circle())
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+            .padding(15)
+            .padding(.trailing, 55)
+            
         }
+        .navigationBarBackButtonHidden(true)
+//        .navigationBarHidden(true) //이게 안먹힌다...
+        .navigationTitle("")
+        .ignoresSafeArea()
+        .statusBar(hidden: true)
     }
     
     var background: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color.cyan.opacity(0.7), Color.purple.opacity(0.7)]), startPoint: .top, endPoint: .bottom)
+            LinearGradient(gradient: Gradient(colors: [Color.cyan, Color.purple]), startPoint: .top, endPoint: .bottom)
             
             Circle()
                 .foregroundColor(.blue.opacity(0.6))
@@ -71,7 +98,9 @@ struct Glassmorphism: View {
 }
 
 struct Glassmorphism_Previews: PreviewProvider {
+    @Namespace static var namespace
+    
     static var previews: some View {
-        Glassmorphism()
+        Glassmorphism(namespace: namespace, showGlass: .constant(true))
     }
 }

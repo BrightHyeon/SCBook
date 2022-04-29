@@ -11,7 +11,14 @@ struct ListModel: Codable {
     let imageName: String
     let title: String
     let introduce: String
-    let hig: HIG?
+    let hig: HIG? //여기서 nil을 가질 수도 있고, @ViewBuilder함수인 view에서도 nil을 받을 수 있기 때문에 문제없음.
+    var isHig: LinkType { //계산로직.
+        if hig == nil {
+            return .noHig
+        } else {
+            return .hig
+        }
+    }
     
     struct HIG: Codable {
         let imageName: String

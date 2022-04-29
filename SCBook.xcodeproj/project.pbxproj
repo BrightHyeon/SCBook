@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		96060166281AE9D800BA0257 /* ColorDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96060165281AE9D800BA0257 /* ColorDict.swift */; };
+		9633CA40281BA6AE006F1F36 /* BackgroundList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9633CA3F281BA6AE006F1F36 /* BackgroundList.swift */; };
+		9633CA43281BAE7C006F1F36 /* GlassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9633CA42281BAE7C006F1F36 /* GlassCell.swift */; };
 		9667B602281854260011C988 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667B601281854260011C988 /* Onboarding.swift */; };
 		9667B604281863790011C988 /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667B603281863790011C988 /* Wave.swift */; };
 		9667B607281868EE0011C988 /* WaveDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667B606281868EE0011C988 /* WaveDraw.swift */; };
@@ -70,6 +72,8 @@
 
 /* Begin PBXFileReference section */
 		96060165281AE9D800BA0257 /* ColorDict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDict.swift; sourceTree = "<group>"; };
+		9633CA3F281BA6AE006F1F36 /* BackgroundList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundList.swift; sourceTree = "<group>"; };
+		9633CA42281BAE7C006F1F36 /* GlassCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassCell.swift; sourceTree = "<group>"; };
 		9667B601281854260011C988 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		9667B603281863790011C988 /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 		9667B606281868EE0011C988 /* WaveDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveDraw.swift; sourceTree = "<group>"; };
@@ -141,6 +145,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9633CA41281BAE6D006F1F36 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9693633A28193A9500D10081 /* Glassmorphism.swift */,
+				96A38B862819A25500720CB8 /* LoopingPlayer.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9633CA44281BAE83006F1F36 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9633CA42281BAE7C006F1F36 /* GlassCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		9667B605281868DF0011C988 /* Graphic */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,7 +197,8 @@
 				968A472328183B4C00491FD6 /* ContentView.swift */,
 				96B0FD1A281A69B7001FC040 /* Views */,
 				96A38B882819A8B800720CB8 /* Transition */,
-				9693632A28191D2B00D10081 /* BackgroundView */,
+				9667B601281854260011C988 /* Onboarding.swift */,
+				9693632A28191D2B00D10081 /* BackgroundList */,
 				96936337281939D400D10081 /* TextStyle */,
 				9693633828193A4200D10081 /* ViewBuilder */,
 				9693633928193A5900D10081 /* ViewModifier */,
@@ -228,14 +250,14 @@
 			path = ForOnboarding;
 			sourceTree = "<group>";
 		};
-		9693632A28191D2B00D10081 /* BackgroundView */ = {
+		9693632A28191D2B00D10081 /* BackgroundList */ = {
 			isa = PBXGroup;
 			children = (
-				9667B601281854260011C988 /* Onboarding.swift */,
-				9693633A28193A9500D10081 /* Glassmorphism.swift */,
-				96A38B862819A25500720CB8 /* LoopingPlayer.swift */,
+				9633CA3F281BA6AE006F1F36 /* BackgroundList.swift */,
+				9633CA44281BAE83006F1F36 /* Cell */,
+				9633CA41281BAE6D006F1F36 /* View */,
 			);
-			path = BackgroundView;
+			path = BackgroundList;
 			sourceTree = "<group>";
 		};
 		96936337281939D400D10081 /* TextStyle */ = {
@@ -521,8 +543,10 @@
 				9693633B28193A9500D10081 /* Glassmorphism.swift in Sources */,
 				9693633428192C7600D10081 /* FontModifiers.swift in Sources */,
 				968A472428183B4C00491FD6 /* ContentView.swift in Sources */,
+				9633CA43281BAE7C006F1F36 /* GlassCell.swift in Sources */,
 				96AD32C2281A3CDD006BF27C /* ListViewModel.swift in Sources */,
 				96AD32C4281A42CB006BF27C /* LinkEnum.swift in Sources */,
+				9633CA40281BA6AE006F1F36 /* BackgroundList.swift in Sources */,
 				96AD32C0281A3CAA006BF27C /* ListModel.swift in Sources */,
 				9693631C281907DA00D10081 /* Line2.swift in Sources */,
 				96AD32C8281A4CD6006BF27C /* HIGView.swift in Sources */,

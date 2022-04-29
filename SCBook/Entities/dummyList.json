@@ -14,14 +14,7 @@
     {
         "imageName": "listBackground",
         "title": "Background",
-        "introduce": "There are variable concepts of background",
-        "hig": {
-            "imageName": "button",
-            "title": "Background",
-            "subtitle": "blabla",
-            "introduce": "Let's see Human Interface Guidelines!",
-            "description": "The system offers a range of button styles that support extensive customization while providing built-in interaction states, accessibility support, and appearance adaptation. In addition, there are several system-defined button types — such as toggle, pop-up, and pull-down — that support a variety of specific use cases."
-        }
+        "introduce": "There are variable concepts of background"
     },
     {
         "imageName": "listTextField",

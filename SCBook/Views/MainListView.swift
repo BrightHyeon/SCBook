@@ -31,7 +31,7 @@ struct MainListView: View {
                         ForEach(listViewModel.list, id: \.title) { item in
                             NavigationLink {
                                 //실제 코드적용할 땐 enum case hashig인 애들만 여기로 전송할 것임.
-                                TransitionView(hig: item.hig)
+                                view(cd: cd, hig: item.hig, for: item.isHig)
                             } label: {
                                 ListCell(cd: cd, item: item)
                             }
