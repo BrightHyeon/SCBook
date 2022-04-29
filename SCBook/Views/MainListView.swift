@@ -43,7 +43,9 @@ struct MainListView: View {
             .toolbar {
                 ToolbarItem(placement: .automatic) {
                     Button {
-                        startOnboard.isCountinue = false
+                        withAnimation(.linear(duration: 1)) {
+                            startOnboard.isCountinue = false
+                        }
                     } label: {
                         Image(systemName: "info.circle")
                             .font(.title3, weight: .bold)

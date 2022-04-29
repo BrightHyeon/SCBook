@@ -24,6 +24,7 @@ struct SCBookApp: App {
  PROBLEM, QUESTION
  
  <TODO>
+ // GCD DispatchTime 이용해서 초반 온보딩 로직 이상한거 수정하기.
  1. 스크롤 내린 후 Link타고 이동하면, LargeTitle이 잘려있음.!!...
  2. namespace HIGView를 스크롤내리는 행위로도 닫을 수 있도록하고, xmark버튼과 함께 움직이도록 해보기. like AppStoreApp
  3. Enum + @ViewBuilder사용해서, hig vs nohig 나누기.

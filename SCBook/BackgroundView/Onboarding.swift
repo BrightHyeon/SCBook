@@ -20,7 +20,7 @@ struct Onboarding: View {
             
             TabView(selection: $selection) {
                 OnboardingView(cd: cd, selection: $selection).tag(0)
-                OnboardingView(cd: cd, selection: $selection).tag(1)
+                OnboardingView2(cd: cd, selection: $selection).tag(1)
             }
             .tabViewStyle(PageTabViewStyle()) //Nice!
             //pageControl과 유사한 형태.x
@@ -105,7 +105,7 @@ struct OnboardingView: View {
         ZStack {
             VStack(alignment: .leading, spacing: 16) {
                 
-                Text(selection == 0 ? "NC1. SCBook - Tamna" : "Tamna - from Jeju")
+                Text("NC1. SCBook - Tamna")
                     .font(.footnote)
                     .fontWeight(.semibold)
                     .foregroundColor(.white.opacity(0.7))
@@ -119,9 +119,7 @@ struct OnboardingView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                     //maxWidth: .infinity로 설정함으로써 사용가능한 최대공간을 사용하도록~!
                 }
-                Text(selection == 0 ? "SwiftUI Collection Book App provides variable design of components. You can see our code and design."
-                     : "These are designs that contain a very personal taste. Keep this in mind. So let's get started."
-                )
+                Text("SwiftUI Collection Book App provides variable design of components. You can see our code and design.")
                 .font(.subheadline.weight(.semibold))
                 .foregroundColor(.white.opacity(0.7))
             }
@@ -153,6 +151,63 @@ struct OnboardingView: View {
                 )
             )
             .padding(20)
+        }
+        //Stroke도 투명도를 한쪽에 줘야 배경에 스며드는 듯한 효과연출됨.
+        //blendMode(.overlay)를 사용하면, 하위 레이어에 따라 상위레이어의 색이 강조된다. 하위가 밝으면 더밝아지고, 어두우면 더 어두워지는.
+    }
+}
+
+//TODO: 기본 .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 30, style: .continuous))와의 차이가 뭐지?!
+
+struct OnboardingView2: View {
+    
+    @ObservedObject var cd: ColorDict
+    @EnvironmentObject var startOnboard: StartOnboard
+    @Binding var selection: Int
+    
+    var body: some View {
+        ZStack {
+            VStack(alignment: .leading, spacing: 16) {
+                
+                Text("Tamna - from Jeju")
+                    .font(.footnote)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.white.opacity(0.7))
+                
+                cd.colors["onboardText"]
+                .frame(height: 140)
+                .mask{
+                    Text("SwiftUI \nCollection \nBook")
+                        .font(.largeTitle)
+                        .bold()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                Text("These are designs that contain a very personal taste. Keep this in mind. So let's get started."
+                )
+                .font(.subheadline.weight(.semibold))
+                .foregroundColor(.white.opacity(0.7))
+            }
+            .padding(30)
+            .background(cd.colors["onboardingView"])
+            .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: 30, style: .continuous)
+                .stroke(
+                    cd.colors["onboardStroke"]!, lineWidth: 1)
+                    .blendMode(.overlay)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 30, style: .continuous)
+                            .stroke(cd.colors["onboardStroke"]!, lineWidth: 3)
+                            .blur(radius: 10)
+                            )
+            )
+            .background(
+                VisualEffectBlurView(blurStyle:
+                        .systemUltraThinMaterialDark)
+                .mask(RoundedRectangle(cornerRadius: 30, style: .continuous)
+                    .fill(LinearGradient(colors: [Color.red, Color.blue.opacity(0.0)], startPoint: .top, endPoint: .bottom))
+                )
+            )
+            .padding(20)
             
             VStack {
                 Spacer()
@@ -161,28 +216,24 @@ struct OnboardingView: View {
                     withAnimation(.linear(duration: 1)) {
                         startOnboard.isCountinue = true
                     }
+                    //I tried this because when I go back to onboarding, Jeju Face appear short time. But I cannot solve this though use dispatch.
+//                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//                        self.selection = 0
+//                    }
                 } label: {
-                    if selection == 1 { //MARK: Problem, Question
-                        VStack {
-                            Text("Continue")
-                                .font(.largeTitle)
-                                .bold()
-                                .foregroundStyle(cd.colors["continueText"]!)
-                                .padding()
-                        }
-                        .padding(10)
-                        .background(cd.colors["continueBackground"]!, in: RoundedRectangle(cornerRadius: 12, style: .continuous)
-                        )
+                    VStack {
+                        Text("Continue")
+                            .font(.largeTitle)
+                            .bold()
+                            .foregroundStyle(cd.colors["continueText"]!)
+                            .padding()
                     }
+                    .padding(10)
+                    .background(cd.colors["continueBackground"]!, in: RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    )
                 }
-                
                 Spacer().frame(height: 100)
             }
         }
-        //Stroke도 투명도를 한쪽에 줘야 배경에 스며드는 듯한 효과연출됨.
-        //blendMode(.overlay)를 사용하면, 하위 레이어에 따라 상위레이어의 색이 강조된다. 하위가 밝으면 더밝아지고, 어두우면 더 어두워지는.
     }
-    
 }
-
-//TODO: 기본 .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 30, style: .continuous))와의 차이가 뭐지?!
