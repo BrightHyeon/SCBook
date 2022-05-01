@@ -220,6 +220,7 @@ struct OnboardingView2: View {
 //                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
 //                        self.selection = 0
 //                    }
+                    //DispatchQueue.global().asyncAfter...
                 } label: {
                     VStack {
                         Text("Continue")

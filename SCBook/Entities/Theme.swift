@@ -42,7 +42,7 @@ struct Theme {
         //ex) .foregroundColor(colorScheme == .light ? .orange : .yellow)
     }
     
-    static func titleColor(forScheme scheme: ColorScheme) -> LinearGradient {
+    static func titleColor(forScheme scheme: ColorScheme) -> some View {
         let lightColor = LinearGradient(
             gradient: Gradient(stops: [
                 .init(color: Color(#colorLiteral(red: 0.5529412031173706, green: 0.1725490242242813, blue: 0.7882353067398071, alpha: 1)), location: 0),
