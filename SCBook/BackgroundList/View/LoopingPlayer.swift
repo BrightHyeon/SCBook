@@ -13,6 +13,7 @@ import AVKit
 
 //오 이렇게하면 View처럼 쓰이게됨.
 struct LoopingPlayer: UIViewRepresentable {
+    
     func makeUIView(context: Context) -> some UIView {
         return PlayerUIView(frame: .zero) //why zero?
     }

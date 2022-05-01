@@ -9,32 +9,33 @@ import SwiftUI
 
 struct HigCellView: View {
     
+    var hig: ListModel.HIG
     var namespace: Namespace.ID
     
     var body: some View {
         VStack {
             Spacer()
             VStack(alignment: .leading, spacing: 12) {
-                Text("Buttons")
+                Text(hig.title)
                     .font(.largeTitle.weight(.bold))
                     .matchedGeometryEffect(id: "title", in: namespace)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                Text("Controls")
+                Text(hig.subtitle)
                     .font(.body.weight(.semibold))
                     .matchedGeometryEffect(id: "subtitle", in: namespace)
-                Text("Let's see Human Interface Guidelines!")
+                Text(hig.introduce)
                     .font(.footnote.weight(.semibold))
             }
             .padding(20)
             .background {
                 RoundedRectangle(cornerRadius: 30, style: .continuous)
                     .fill(.ultraThinMaterial)
-                    .blur(radius: 30)
+                    .blur(radius: 20)
             }
         }
         .foregroundStyle(.primary)
         .background(
-            Image("Button")
+            Image(hig.imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .matchedGeometryEffect(id: "image", in: namespace)
@@ -53,6 +54,6 @@ struct HigCellView_Previews: PreviewProvider {
     @Namespace static var namespace
     
     static var previews: some View {
-        HigCellView(namespace: namespace)
+        HigCellView(hig: ListViewModel().list[0].hig!, namespace: namespace)
     }
 }

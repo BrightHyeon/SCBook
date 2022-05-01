@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct TransitionView: View {
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+    @ObservedObject var cd: ColorDict
     //@Namespace 라는 데코레이터가 생겼고 이를 사용하는 .matchedGeometryEffect(id:, in:) 이 생겼네요. 분명히 다른 뷰인데 서로 같은 셀을 다룬다는걸 알려줘서 셀 자체가 뷰에서 뷰로 이동하는 예제입니다. 굉장하네요!
     @Namespace var namespace
     @State private var show = false
+    var hig: ListModel.HIG?
     
     var body: some View {
         ZStack {
-            background
+            
+            Theme.backgroundStyle(forScheme: colorScheme)
             
             ScrollView {
                 
@@ -25,9 +29,9 @@ struct TransitionView: View {
                     .padding(.horizontal, 20)
                 
                 if !show {
-                    HigCellView(namespace: namespace)
+                    HigCellView(hig: hig!, namespace: namespace)
                         .onTapGesture {
-                            withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
+                            withAnimation(.spring(response: 0.6, dampingFraction: 0.6)) {
                                 show.toggle()
                             }
                         }
@@ -35,30 +39,18 @@ struct TransitionView: View {
             }
             
             if show {
-                HIGView(namespace: namespace, show: $show)
+                HIGView(hig: hig!, cd: cd, namespace: namespace, show: $show)
             }
         }
-        .navigationTitle("BUTTONS")
+        .navigationTitle(hig!.title) //어차피 hig가 nil인 애들은 어차피 여기로 안온다.
         .navigationBarTitleDisplayMode(.large)
-    }
-    
-    var background: some View {
-        AngularGradient(
-            gradient: Gradient(stops: [
-                .init(color: Color(#colorLiteral(red: 0.9541666507720947, green: 0.6599652767181396, blue: 0.6599652767181396, alpha: 1)), location: 0.14326532185077667),
-                .init(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), location: 0.4985717535018921),
-                .init(color: Color(#colorLiteral(red: 0.9541666507720947, green: 0.6599652767181396, blue: 0.6599652767181396, alpha: 1)), location: 0.8701561689376831),
-                .init(color: Color(#colorLiteral(red: 0.9041666388511658, green: 0.4596180319786072, blue: 0.4596180319786072, alpha: 1)), location: 0.9971840381622314)]),
-            center: UnitPoint(x: 0.4999999056591794, y: 0.5000000405261534),
-            angle: .init(degrees: 45)
-        )
-        .ignoresSafeArea()
     }
 }
 
 struct TransitionView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        TransitionView()
+        TransitionView(cd: ColorDict(), hig: ListViewModel().list[0].hig)
     }
 }
 

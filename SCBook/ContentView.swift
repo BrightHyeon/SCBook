@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var startOnboard: StartOnboard
+    
     var body: some View {
-        Text("Hello, World!")
+        if startOnboard.isCountinue {
+            MainListView()
+        } else {
+            Onboarding()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(StartOnboard())
     }
 }

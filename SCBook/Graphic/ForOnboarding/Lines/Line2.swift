@@ -26,6 +26,23 @@ struct Line2: View {
 
 struct Line2_Previews: PreviewProvider {
     static var previews: some View {
-        Line2()
+        LineJeju2()
+    }
+}
+
+struct LineJeju2: View {
+    let w = UIScreen.main.bounds.width / 10 //대략 40
+    let h = UIScreen.main.bounds.height / 10 //대략 85
+    
+    var body: some View {
+        LinearGradient(
+            gradient: Gradient(stops: [
+                .init(color: Color(#colorLiteral(red: 0.9750000238418579, green: 0.8246875405311584, blue: 0.8246875405311584, alpha: 1)), location: 0),
+                .init(color: Color(#colorLiteral(red: 0.8706770539283752, green: 0.9541666507720947, blue: 0.9341291189193726, alpha: 1)), location: 1)]),
+            startPoint: UnitPoint(x: 0.5, y: -3.0616171314629196e-17),
+            endPoint: UnitPoint(x: 0.5, y: 0.9999999999999999))
+        .mask(
+            LineDraw().frame(width: w*15, height: h*4)
+        )
     }
 }

@@ -9,48 +9,60 @@ import SwiftUI
 
 struct HIGView: View {
     
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+    var hig: ListModel.HIG
+    @ObservedObject var cd: ColorDict
     var namespace: Namespace.ID
     @Binding var show: Bool
     
     var body: some View {
-        ZStack {
-            ScrollView {
+        //        ZStack {
+        ScrollView {
+            ZStack {
                 cover
                 
-                Text("The system offers a range of button styles that support extensive customization while providing built-in interaction states, accessibility support, and appearance adaptation. In addition, there are several system-defined button types — such as toggle, pop-up, and pull-down — that support a variety of specific use cases.")
-                    .font(.body.weight(.semibold))
-                    .padding()
-            }
-            .ignoresSafeArea()
-            .background(
-                AngularGradient(
-                    gradient: Gradient(stops: [
-                        .init(color: Color(#colorLiteral(red: 0.9541666507720947, green: 0.6599652767181396, blue: 0.6599652767181396, alpha: 1)), location: 0.14326532185077667),
-                        .init(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), location: 0.4985717535018921),
-                        .init(color: Color(#colorLiteral(red: 0.9541666507720947, green: 0.6599652767181396, blue: 0.6599652767181396, alpha: 1)), location: 0.8701561689376831),
-                        .init(color: Color(#colorLiteral(red: 0.9041666388511658, green: 0.4596180319786072, blue: 0.4596180319786072, alpha: 1)), location: 0.9971840381622314)]),
-                    center: UnitPoint(x: 0.4999999056591794, y: 0.5000000405261534),
-                    angle: .init(degrees: 45)
-                )
-            )
-            
-            
-            Button {
-                withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
-                    show.toggle()
+                Button {
+                    withAnimation(.spring(response: 0.6, dampingFraction: 0.6)) {
+                        show.toggle()
+                    }
+                } label: {
+                    Image(systemName: "xmark")
+                        .font(.body.weight(.bold))
+                        .foregroundColor(.secondary)
+                        .padding(8)
+                        .background(.ultraThinMaterial, in: Circle())
                 }
-            } label: {
-                Image(systemName: "xmark")
-                    .font(.body.weight(.bold))
-                    .foregroundColor(.secondary)
-                    .padding(8)
-                    .background(.ultraThinMaterial, in: Circle())
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+                .padding(15)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
-            .padding(15)
+            
+            Text(hig.description)
+                .font(.body.weight(.semibold))
+                .padding()
         }
+        .ignoresSafeArea()
+        .background(
+            Theme.backgroundStyle(forScheme: colorScheme)
+        )
+        
+        //MARK: 버튼을 여기 넣는 것보다 위 코드 ScrollView에 묶어야 함께 움직임~!
+        //            Button {
+        //                withAnimation(.spring(response: 0.6, dampingFraction: 0.6)) {
+        //                    show.toggle()
+        //                }
+        //            } label: {
+        //                Image(systemName: "xmark")
+        //                    .font(.body.weight(.bold))
+        //                    .foregroundColor(.secondary)
+        //                    .padding(8)
+        //                    .background(.ultraThinMaterial, in: Circle())
+        //            }
+        //            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+        //            .padding(15)
+        //        }
+        
         .navigationBarBackButtonHidden(true)
-//        .navigationBarHidden(true) //이게 안먹힌다...
+        //        .navigationBarHidden(true) //이게 안먹힌다...
         .navigationTitle("")
         .edgesIgnoringSafeArea(.all)
         .statusBar(hidden: true)
@@ -65,7 +77,7 @@ struct HIGView: View {
             .frame(height: 300)
             .foregroundStyle(.black)
             .background(
-                Image("Button")
+                Image(hig.imageName)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .matchedGeometryEffect(id: "image", in: namespace)
@@ -76,11 +88,11 @@ struct HIGView: View {
             )
             .overlay(
                 VStack(alignment: .leading, spacing: 12) {
-                    Text("Buttons")
+                    Text(hig.title)
                         .font(.largeTitle.weight(.bold))
                         .matchedGeometryEffect(id: "title", in: namespace)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    Text("Controls")
+                    Text(hig.subtitle)
                         .font(.body.weight(.semibold))
                         .matchedGeometryEffect(id: "subtitle", in: namespace)
                 }
@@ -104,6 +116,6 @@ struct HIGView_Previews: PreviewProvider {
     @Namespace static var namespace
     
     static var previews: some View {
-        HIGView(namespace: namespace, show: .constant(true))
+        HIGView(hig: ListViewModel().list[0].hig!, cd: ColorDict(), namespace: namespace, show: .constant(true))
     }
 }
