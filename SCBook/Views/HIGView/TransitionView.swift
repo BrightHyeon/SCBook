@@ -9,37 +9,53 @@ import SwiftUI
 
 struct TransitionView: View {
     @Environment(\.colorScheme) var colorScheme: ColorScheme
-    @ObservedObject var cd: ColorDict
+    //    @ObservedObject var cd: ColorDict
     //@Namespace 라는 데코레이터가 생겼고 이를 사용하는 .matchedGeometryEffect(id:, in:) 이 생겼네요. 분명히 다른 뷰인데 서로 같은 셀을 다룬다는걸 알려줘서 셀 자체가 뷰에서 뷰로 이동하는 예제입니다. 굉장하네요!
     @Namespace var namespace
     @State private var show = false
+    @Namespace var topID //이거없이도 그냥 id에 Int써서 사용도 가능.
     var hig: ListModel.HIG?
     
     var body: some View {
-        ZStack {
+        
+        ScrollViewReader { proxy in
             
-            Theme.backgroundStyle(forScheme: colorScheme)
-            
-            ScrollView {
+            ZStack {
                 
-                Text("Human Interface Guideline".uppercased())
-                    .font(.body.weight(.semibold))
-                    .foregroundColor(.secondary)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.horizontal, 20)
+                Theme.backgroundStyle(forScheme: colorScheme)
+                //            Color.offWhite
                 
-                if !show {
-                    HigCellView(hig: hig!, namespace: namespace)
-                        .onTapGesture {
-                            withAnimation(.spring(response: 0.6, dampingFraction: 0.6)) {
-                                show.toggle()
+                ScrollView {
+                    
+                    Text("Human Interface Guideline".uppercased())
+                        .font(.body.weight(.semibold))
+                        .foregroundColor(.secondary)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.horizontal, 20)
+                        .id(topID)
+                    
+                    if !show {
+                        HigCellView(hig: hig!, namespace: namespace)
+                            .onTapGesture {
+                                withAnimation(.spring(response: 0.6, dampingFraction: 0.6)) {
+                                    show.toggle()
+                                }
                             }
-                        }
+                    }
+                    
+                    Spacer().frame(height: 100)
+                    
+                    //Nuemorphism Style
+                    NavigationLink {
+                        nextView(hig: hig!.title)
+                    } label: {
+                        PinkButton(text: "Let's see \(hig!.title) Design!")
+                    }
                 }
-            }
-            
-            if show {
-                HIGView(hig: hig!, cd: cd, namespace: namespace, show: $show)
+                
+                if show {
+                    HIGView(hig: hig!, namespace: namespace, show: $show)
+                }
             }
         }
         .navigationTitle(hig!.title) //어차피 hig가 nil인 애들은 어차피 여기로 안온다.
@@ -50,7 +66,7 @@ struct TransitionView: View {
 struct TransitionView_Previews: PreviewProvider {
     
     static var previews: some View {
-        TransitionView(cd: ColorDict(), hig: ListViewModel().list[0].hig)
+        TransitionView(hig: ListViewModel().list[0].hig)
     }
 }
 

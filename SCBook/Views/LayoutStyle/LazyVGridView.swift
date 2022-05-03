@@ -7,29 +7,30 @@
 
 import SwiftUI
 
-struct BasicButtonView: View {
+struct LazyVGridView: View {
     
     var gridItem: [GridItem] = [
-        GridItem(.flexible(), spacing: 2),
-        GridItem(.flexible(), spacing: 2),
+        GridItem(.flexible(), spacing: 5),
+        GridItem(.flexible(), spacing: 5),
         GridItem(.flexible())
     ]
     
     var body: some View {
         ScrollView {
             ScrollView {
-                LazyVGrid(columns: gridItem, spacing: 2) {
-                    ForEach(0...100, id: \.self) {
-                        Rectangle()
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.mint)
-                            .opacity(0.3)
-                        //or fill해주면 딱 비율 좋아짐.
-                            .overlay(
-                                Text("\($0)")
-                            )
+                LazyVGrid(columns: gridItem, spacing: 5) {
+                    ForEach(0...100, id: \.self) { num in
+                        
+                        GroupBox {
+                            Label("SwiftUI", systemImage: "heart.fill")
+                        } content: {
+                            Text("Day \(num)")
+                        }
+//                        .groupBoxStyle(DefaultGroupBoxStyle()) //default자체도 이쁨.
+                        .groupBoxStyle(MyGroupBoxStyle())
                     }
                 }
+                .padding()
             }
         }
     }
@@ -37,7 +38,25 @@ struct BasicButtonView: View {
 
 struct BasicButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        BasicButtonView()
+        LazyVGridView()
+    }
+}
+//GroupBoxStyle프로토콜 채택
+struct MyGroupBoxStyle: GroupBoxStyle {
+    //준수위한 필수메서드 makeBody
+    func makeBody(configuration: Configuration) -> some View {
+        VStack(alignment: .center, spacing: 12) {
+            configuration.label
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
+                .font(.body.bold())
+                .foregroundColor(.red)
+            configuration.content
+                .font(.subheadline.bold())
+        }
+        .padding()
+        .background(Color.systemGroupedBackground)
+        .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
     }
 }
 

@@ -11,11 +11,14 @@ struct HIGView: View {
     
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     var hig: ListModel.HIG
-    @ObservedObject var cd: ColorDict
+//    @ObservedObject var cd: ColorDict
     var namespace: Namespace.ID
     @Binding var show: Bool
     
     var body: some View {
+        //MARK: 여기부터하면돼
+        let decription = partialColorString(all: hig.description, allColor: .primary, partial: "of", partialColor: .red)
+        
         //        ZStack {
         ScrollView {
             ZStack {
@@ -36,8 +39,8 @@ struct HIGView: View {
                 .padding(15)
             }
             
-            Text(hig.description)
-                .font(.body.weight(.semibold))
+            Text(decription) //AttributedString도 StringProtocol을 준수하기에 할당가능.
+                .font(.body)
                 .padding()
         }
         .ignoresSafeArea()
@@ -116,6 +119,6 @@ struct HIGView_Previews: PreviewProvider {
     @Namespace static var namespace
     
     static var previews: some View {
-        HIGView(hig: ListViewModel().list[0].hig!, cd: ColorDict(), namespace: namespace, show: .constant(true))
+        HIGView(hig: ListViewModel().list[0].hig!, namespace: namespace, show: .constant(true))
     }
 }

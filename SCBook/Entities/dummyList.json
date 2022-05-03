@@ -102,15 +102,8 @@
     },
     {
         "imageName": "listButton",
-        "title": "Button",
-        "introduce": "You can create variable style of button",
-        "hig": {
-            "imageName": "button",
-            "title": "Button",
-            "subtitle": "Controls",
-            "introduce": "Let's see Human Interface Guidelines!",
-            "description": "The system offers a range of button styles that support extensive customization while providing built-in interaction states, accessibility support, and appearance adaptation. In addition, there are several system-defined button types — such as toggle, pop-up, and pull-down — that support a variety of specific use cases."
-        }
+        "title": "LayoutStyle",
+        "introduce": "Let's see compositinal layout style!"
     },
     {
         "imageName": "listBackground",

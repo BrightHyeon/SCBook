@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 @main
 struct SCBookApp: App {
     
@@ -40,4 +39,17 @@ struct SCBookApp: App {
  7. sidebar도 써보고프다.
  
  8. Dark Mode용 Setting. -> solve.
+ 
+ 9. file 삭제할 때 참조덩어리도 삭제하는법?!
+ 
+ 10. neumorphism할 때 했던 방법 응용해서 PinkButton다시 잘 만들수없는지 생각해보기.
+ 
+ 11. Geometry안쓰고도 잘 정렬할 수 있는 방법 찾기 feat.ButtonStyle
+ */
+
+//MARK: 나중에 NC1 끝나고 고찰해봐야할 것 -> 재사용성 측면문제!!!. 단순 @ViewBuilder커스텀뷰, Modifier만이 능사가 아니다!!!. extenstion 및 View 이외의 프로토콜들도 Custom할줄 알아야 일류~!!!
+
+/*
+ Toggle 고찰. 내가 아는 그 토클모양만 있는 것이아니었음.
+ 그냥 true false가 버튼을 눌렀을 때, 변한값이 고정되는 것이 바로 Toggle~!
  */

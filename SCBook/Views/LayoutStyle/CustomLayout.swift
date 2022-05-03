@@ -7,13 +7,13 @@
 //  youtube - SwiftUI lazy compositional layout 영상 참고.
 
 import SwiftUI
-
-//MARK: Building Custom View like ForEach                                                   //아래 프로토콜 준수하려면 Element가 Hashable해야함.
+                                                                                                //ForEach에 들어가는 데이터가 Hashable해야하듯이.
+//MARK: Building Custom View like ForEach~!!!                                                   //아래 프로토콜 준수하려면 Element가 Hashable해야함.
 struct CustomLayout<Content, Item, ID>: View where Content: View, ID: Hashable, Item: RandomAccessCollection, Item.Element: Hashable {
     
-    var content: (Item.Element) -> Content
+    var content: (Item.Element) -> Content //Collection의 Element타입만 받겠다.
     var items: Item
-    var id: KeyPath<Item.Element, ID> //item의 Element의 hashable한 id를 기반으로 경로찾아 참조하기.
+    var id: KeyPath<Item.Element, ID> //item의 Element의 hashable한 id를 기반으로 경로찾아 참조하기. - ForEach문의 KeyPath
     var spacing: CGFloat
                                                     //@ViewBuilder: 다중문 클로저 지원. @escaping: 탈출해서 해당클로저 값을 외부 변수에 할당가능하게만들기.
     init(items: Item, id: KeyPath<Item.Element, ID>, spacing: CGFloat = 5, @ViewBuilder content: @escaping (Item.Element) -> Content) {
@@ -34,7 +34,7 @@ struct CustomLayout<Content, Item, ID>: View where Content: View, ID: Hashable, 
     //MARK: Identifying Row Type
     func layoutType(row: [Item.Element]) -> LayoutType {
         let index = generateColumns().firstIndex { item in
-            return item == row //columns에서 해당 row와 일치한 놈의 index찾기.
+            return item == row //columns배열에서 해당 row와 일치한 놈의 index찾기.
         } ?? 0
         
         //MARK: Layout Order will be 1,2,3,1,2,3.....
@@ -62,7 +62,10 @@ struct CustomLayout<Content, Item, ID>: View where Content: View, ID: Hashable, 
             let width = proxy.size.width
             let height = (proxy.size.height - spacing) / 2
             let type = layoutType(row: row)
-            let columnWidth = (width - spacing * 2) / 3
+            //let columnWidth = (width - spacing * 2) / 3 //이렇게만 쓰면 보라색경고창 뜰 수 있다. 음수값을 초래할수도있다고~!! 그래서 항상 width가 >0이 아닐 때도 해주거나, abs를 붙여야한다.
+            let columnWidth = abs((width - spacing * 2) / 3)
+            //or
+//            let columnWidth = width > 0 ? (width - spacing * 2) / 3 : 0
             
             HStack(spacing: spacing) {
                 //MARK: This Order is Your Wish
@@ -104,14 +107,14 @@ struct CustomLayout<Content, Item, ID>: View where Content: View, ID: Hashable, 
                 }
             }
         } //GeometryReader의 frame.
-        .frame(height: layoutType(row: row) == .type1 || layoutType(row: row) == .type3 ? 250 : 125)
+        .frame(height: layoutType(row: row) == .type1 || layoutType(row: row) == .type3 ? 250 : 122.5)
     }
     
     //MARK: Safely Unwrapping Content Index
     @ViewBuilder
     func safeView(row: [Item.Element], index: Int) -> some View {
         if (row.count - 1) >= index {
-            content(row[index])
+            content(row[index]) //Q. 어떻게 nil이나도 오류가 안날까?
         }
     }
     
@@ -121,7 +124,7 @@ struct CustomLayout<Content, Item, ID>: View where Content: View, ID: Hashable, 
         var columns: [[Item.Element]] = []
         var row: [Item.Element] = []
         
-        for item in items { //items는 RandomAccessCollection. 즉, item == Item.Element == RandomAccessCollection.Element임.
+        for item in items { //items는 (RandomAccess)Collection type. 즉, item == Item.Element == RandomAccessCollection.Element임.
             //MARK: Each Row Consists of 3 Views == 하나의 row당 3개의 Views를 포함.
             //Optinal You can Modify
             if row.count == 3 {

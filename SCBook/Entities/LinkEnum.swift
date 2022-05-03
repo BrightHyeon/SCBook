@@ -11,21 +11,41 @@ import SwiftUI
 
 enum LinkType: String, Codable {
     case hig
-    case noHig //noHig에서도 더 추가할거면 여기서 분류하면된다.
+    //case nohig //noHig에서도 더 추가할거면 여기서 분류하면된다.
+    case background
+    case layoutStyle
 }
 
 @ViewBuilder //MARK: 회고, 고찰 꼭 하기 필수!!! Essential
-func view(cd: ColorDict, hig item: ListModel.HIG?, for type: LinkType) -> some View {
+func view(hig item: ListModel.HIG?, for type: LinkType) -> some View {
     
     switch type {
     case .hig:
-        TransitionView(cd: cd, hig: item)
+        TransitionView(hig: item)
         
-    case .noHig:
-        BackgroundList(cd: cd)
+    case .background:
+        BackgroundList()
+        
+    case .layoutStyle:
+        LayoutNavView()
     }
-
 }
+
+@ViewBuilder
+func nextView(hig title: String) -> some View {
+    switch title {
+    case "Button":
+        ButtonListView()
+    case "TextField":
+        Text("TextField")
+    case "Stepper":
+        Text("Stepper")
+    default:
+        EmptyView()
+    }
+}
+
+
 /*
  일반적으로, 원론적으로 함수는 single return type을 기대한다.
  

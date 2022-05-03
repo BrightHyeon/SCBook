@@ -13,12 +13,14 @@ struct MainListView: View {
     @EnvironmentObject var startOnboard: StartOnboard
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     @State private var opacity: Double = 0.0
-    
+
     @StateObject var listViewModel = ListViewModel()
     @StateObject var cd = ColorDict()
     @State private var text: String = ""
     @Namespace var topID //위로 한번에 이동하기 위한 용도.
     //이거 관련해서는 따로 NC1_Tamna에 정리하겠음.
+//    @State var proxyMemory:
+    
     var body: some View {
         NavigationView {
             ScrollViewReader { proxy in
@@ -32,7 +34,7 @@ struct MainListView: View {
                                 .overlay(
                                     GeometryReader { proxy -> Color in //Color는 단순히 View return 용도.
                                         let offset = proxy.frame(in: .global).minY //frame에 4가지 요소가 있는데 그 중 y축과 관련된 minY.
-                                        print(offset)
+                                        
                                         if offset < -70 { //proxy값 관찰용.
                                             withAnimation {
                                                 self.opacity = 1
@@ -52,7 +54,7 @@ struct MainListView: View {
                             ForEach(listViewModel.list, id: \.title) { item in
                                 NavigationLink {
                                     //실제 코드적용할 땐 enum case hashig인 애들만 여기로 전송할 것임.
-                                    view(cd: cd, hig: item.hig, for: item.isHig)
+                                    view(hig: item.hig, for: item.isHig)
                                 } label: {
                                     ListCell(cd: cd, item: item)
                                 }
@@ -132,9 +134,9 @@ struct ListCell: View {
     }
 }
 
-struct MainListView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainListView()
-            .environmentObject(StartOnboard())
-    }
-}
+//struct MainListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MainListView()
+//            .environmentObject(StartOnboard())
+//    }
+//}
