@@ -181,6 +181,7 @@ struct ButtonLabel<Content>: View where Content: View {
     let title: String
     
     let content: () -> Content
+    
     init(title: String, @ViewBuilder content: @escaping () -> Content) {
         self.content = content
         self.title = title

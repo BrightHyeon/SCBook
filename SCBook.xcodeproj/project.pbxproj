@@ -60,6 +60,8 @@
 		96B0FD2C281A80C0001FC040 /* Orange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B0FD2B281A80C0001FC040 /* Orange.swift */; };
 		96BA3DC9281BD34400A8D4DE /* LazyVGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BA3DC8281BD34400A8D4DE /* LazyVGridView.swift */; };
 		96BFF0D528202BEF00E4F1D7 /* BasicButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF0D428202BEF00E4F1D7 /* BasicButtons.swift */; };
+		96C2A51C28225CDF00FC73E3 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C2A51B28225CDF00FC73E3 /* TextFieldView.swift */; };
+		96C2A51F28225D0C00FC73E3 /* TextSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C2A51E28225D0C00FC73E3 /* TextSizeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +137,8 @@
 		96B0FD2B281A80C0001FC040 /* Orange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orange.swift; sourceTree = "<group>"; };
 		96BA3DC8281BD34400A8D4DE /* LazyVGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVGridView.swift; sourceTree = "<group>"; };
 		96BFF0D428202BEF00E4F1D7 /* BasicButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButtons.swift; sourceTree = "<group>"; };
+		96C2A51B28225CDF00FC73E3 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		96C2A51E28225D0C00FC73E3 /* TextSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSizeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +300,7 @@
 		96936337281939D400D10081 /* Text */ = {
 			isa = PBXGroup;
 			children = (
+				96C2A51E28225D0C00FC73E3 /* TextSizeView.swift */,
 				96936335281938E700D10081 /* GradientText.swift */,
 			);
 			path = Text;
@@ -317,6 +322,7 @@
 				96AD32C7281A4CD6006BF27C /* HIGView.swift */,
 				9688C311281FAB67002D0314 /* Button */,
 				96936337281939D400D10081 /* Text */,
+				96C2A51D28225CE700FC73E3 /* TextField */,
 			);
 			path = HIGView;
 			sourceTree = "<group>";
@@ -422,6 +428,14 @@
 				9607E605281D654400F1C461 /* CustomLayout.swift */,
 			);
 			path = LayoutStyle;
+			sourceTree = "<group>";
+		};
+		96C2A51D28225CE700FC73E3 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				96C2A51B28225CDF00FC73E3 /* TextFieldView.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -572,6 +586,7 @@
 				9667B602281854260011C988 /* Onboarding.swift in Sources */,
 				969363142818FF9800D10081 /* FaceDraw.swift in Sources */,
 				969363162818FFC200D10081 /* Face.swift in Sources */,
+				96C2A51C28225CDF00FC73E3 /* TextFieldView.swift in Sources */,
 				9667B609281869450011C988 /* Wave2.swift in Sources */,
 				96A38B8A2819A8C900720CB8 /* TransitionView.swift in Sources */,
 				96936336281938E700D10081 /* GradientText.swift in Sources */,
@@ -581,6 +596,7 @@
 				9633CA43281BAE7C006F1F36 /* GlassCell.swift in Sources */,
 				96AD32C2281A3CDD006BF27C /* ListViewModel.swift in Sources */,
 				96AD32C4281A42CB006BF27C /* LinkEnum.swift in Sources */,
+				96C2A51F28225D0C00FC73E3 /* TextSizeView.swift in Sources */,
 				9633CA40281BA6AE006F1F36 /* BackgroundList.swift in Sources */,
 				96AD32C0281A3CAA006BF27C /* ListModel.swift in Sources */,
 				9693631C281907DA00D10081 /* Line2.swift in Sources */,

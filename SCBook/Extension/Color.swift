@@ -21,3 +21,5 @@ extension LinearGradient {
         self.init(gradient: Gradient(colors: colors), startPoint: .topLeading, endPoint: .bottomTrailing)
     } //색만 입력하면 자동으로 시작과 끝 포인트는 고정값으로 지정되도록.
 }
+
+//extension, Protocol
