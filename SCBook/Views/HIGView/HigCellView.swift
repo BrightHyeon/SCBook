@@ -37,7 +37,7 @@ struct HigCellView: View {
         .background(
             Image(hig.imageName)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .aspectRatio(contentMode: .fill)
                 .matchedGeometryEffect(id: "image", in: namespace)
         )
         .mask(

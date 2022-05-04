@@ -16,9 +16,6 @@ struct HIGView: View {
     @Binding var show: Bool
     
     var body: some View {
-        //MARK: 여기부터하면돼
-        let decription = partialColorString(all: hig.description, allColor: .primary, partial: "of", partialColor: .red)
-        
         //        ZStack {
         ScrollView {
             ZStack {
@@ -39,9 +36,13 @@ struct HIGView: View {
                 .padding(15)
             }
             
-            Text(decription) //AttributedString도 StringProtocol을 준수하기에 할당가능.
-                .font(.body)
+            Text(hig.markdown) //AttributedString도 StringProtocol을 준수하기에 할당가능.
+                .font(.subheadline)
+                .multilineTextAlignment(.leading)
+                .lineSpacing(7)
                 .padding()
+            
+            Spacer().frame(height: 50)
         }
         .ignoresSafeArea()
         .background(

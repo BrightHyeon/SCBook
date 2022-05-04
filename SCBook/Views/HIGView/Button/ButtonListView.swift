@@ -27,12 +27,6 @@ struct ButtonListView: View {
                 } label: {
                     PinkButton(text: "Advanced")
                 }
-                
-                NavigationLink {
-                    MorphismButtons()
-                } label: {
-                    PinkButton(text: "Applications")
-                }
             }
         }
         .navigationTitle("Button Style List")
