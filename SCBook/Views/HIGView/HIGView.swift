@@ -11,7 +11,7 @@ struct HIGView: View {
     
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     var hig: ListModel.HIG
-    @ObservedObject var cd: ColorDict
+//    @ObservedObject var cd: ColorDict
     var namespace: Namespace.ID
     @Binding var show: Bool
     
@@ -36,9 +36,13 @@ struct HIGView: View {
                 .padding(15)
             }
             
-            Text(hig.description)
-                .font(.body.weight(.semibold))
+            Text(hig.markdown) //AttributedString도 StringProtocol을 준수하기에 할당가능.
+                .font(.subheadline)
+                .multilineTextAlignment(.leading)
+                .lineSpacing(7)
                 .padding()
+            
+            Spacer().frame(height: 50)
         }
         .ignoresSafeArea()
         .background(
@@ -116,6 +120,6 @@ struct HIGView_Previews: PreviewProvider {
     @Namespace static var namespace
     
     static var previews: some View {
-        HIGView(hig: ListViewModel().list[0].hig!, cd: ColorDict(), namespace: namespace, show: .constant(true))
+        HIGView(hig: ListViewModel().list[0].hig!, namespace: namespace, show: .constant(true))
     }
 }

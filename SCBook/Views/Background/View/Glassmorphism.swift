@@ -27,6 +27,7 @@ struct Glassmorphism: View {
                     .foregroundStyle(
                         cd.colors["continueText"]!
                     )
+                    .minimumScaleFactor(0.7)
                     .matchedGeometryEffect(id: "title", in: namespace)
                     .padding()
             }

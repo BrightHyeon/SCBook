@@ -10,7 +10,7 @@ import SwiftUI
 struct BackgroundList: View {
     
     @Environment(\.colorScheme) var colorScheme: ColorScheme
-    @ObservedObject var cd: ColorDict
+//    @ObservedObject var cd: ColorDict
     @Namespace var namespace
     @State private var showGlass = false
     
@@ -54,6 +54,6 @@ struct BackgroundList_Previews: PreviewProvider {
     
     
     static var previews: some View {
-        BackgroundList(cd: ColorDict())
+        BackgroundList()
     }
 }

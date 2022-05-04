@@ -68,4 +68,25 @@ struct Theme {
             return lightColor
         }
     }
+    
+    static func buttonColor(forScheme scheme: ColorScheme) -> LinearGradient {
+        let lightButton = LinearGradient(gradient: Gradient(stops: [
+            .init(color: Color(#colorLiteral(red: 0.9541666507720947, green: 0.6599652767181396, blue: 0.6599652767181396, alpha: 1)), location: 0.14326532185077667),
+            .init(color: Color(#colorLiteral(red: 0.9041666388511658, green: 0.4596180319786072, blue: 0.4596180319786072, alpha: 1)), location: 0.9971840381622314)]),
+                                         startPoint: .topLeading, endPoint: .bottomTrailing)
+        
+        let darkButton = LinearGradient(gradient: Gradient(stops: [
+            .init(color: Color(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)), location: 0.14326532185077667),
+            .init(color: Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)), location: 0.9971840381622314)]),
+                                        startPoint: .topLeading, endPoint: .bottomTrailing)
+        
+        switch scheme {
+        case .light:
+            return lightButton
+        case .dark:
+            return darkButton
+        @unknown default:
+            return lightButton
+        }
+    }
 }

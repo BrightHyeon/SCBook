@@ -17,9 +17,10 @@ struct GlassCell: View {
         VStack {
             Spacer()
             Text("Glassmorphism")
-                .font(.largeTitle)
+                .font(.title)
                 .bold()
-                .foregroundColor(.primary)
+                .foregroundColor(.white)
+                .minimumScaleFactor(0.7)
                 .matchedGeometryEffect(id: "title", in: namespace)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(20)
