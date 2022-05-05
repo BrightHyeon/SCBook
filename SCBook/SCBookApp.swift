@@ -9,6 +9,9 @@ import SwiftUI
 @main
 struct SCBookApp: App {
     
+    //UIKit에서 대리자(delegate)를 제공하는데 앱에서 사용되는 속성 래퍼.
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     let startOnboard = StartOnboard()
     
     var body: some Scene {
@@ -33,18 +36,33 @@ struct SCBookApp: App {
  4. nohig case는 바로 디자인 볼 수 있도록 하기. -> solve...
  5. 메인리스트뷰에서 info버튼 누르면, 다시 온보딩화면으로 갈 수 있도록 false값 주기. -> solve...
  
- 6. 이후 배경 디자인들부터 만들어놓은거 넣고, 그 이후에 버튼들 basic부터해서 나열할 것.
-    -> 나열할 때는 tech core 중 잘 안써본 keyword사용해서 해보기.
+ 6. 이후 배경 디자인들부터 만들어놓은거 넣고, 그 이후에 버튼들 basic부터해서 나열할 것. -> solve...
+    -> 나열할 때는 tech core 중 잘 안써본 keyword사용해서 해보기. -> solve...
  
- 7. sidebar도 써보고프다.
+ 7. sidebar도 써보고프다. -> Just...
  
- 8. Dark Mode용 Setting. -> solve.
+ 8. Dark Mode용 Setting. -> solve...
  
- 9. file 삭제할 때 참조덩어리도 삭제하는법?!
+ 9. file 삭제할 때 참조덩어리도 삭제하는법?! -> Just...
  
- 10. neumorphism할 때 했던 방법 응용해서 PinkButton다시 잘 만들수없는지 생각해보기.
+ 10. neumorphism할 때 했던 방법 응용해서 PinkButton다시 잘 만들수없는지 생각해보기. -> Just...
  
- 11. Geometry안쓰고도 잘 정렬할 수 있는 방법 찾기 feat.ButtonStyle
+ 11. Geometry안쓰고도 잘 정렬할 수 있는 방법 찾기 feat.ButtonStyle -> Just...
+ 
+ 12. launchScreen만들기. -> solve...
+ 
+ 13. Font 정리 -> solve...
+ 
+ 14. 주석 정리 -> solve...
+ 
+ 15. Text Rotation -> solve...
+ 
+ 16. 3D effect활용한 Page Transition 구현해보기.
+ 
+ //MARK: 해볼것들
+ 17. 붉은 글씨 써보기. HIG.
+ 18. HIGCell-> HIGView 전환 때 글씨 깨지는 거 수정하기.
+ 19. NavigationTitle안달린것들 달기.
  */
 
 //MARK: 나중에 NC1 끝나고 고찰해봐야할 것 -> 재사용성 측면문제!!!. 단순 @ViewBuilder커스텀뷰, Modifier만이 능사가 아니다!!!. extenstion 및 View 이외의 프로토콜들도 Custom할줄 알아야 일류~!!!

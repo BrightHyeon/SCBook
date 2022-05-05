@@ -37,9 +37,13 @@ func nextView(hig title: String) -> some View {
     case "Button":
         ButtonListView()
     case "TextField":
-        Text("TextField")
+        TextFieldView()
     case "Stepper":
-        Text("Stepper")
+        StepperView()
+    case "Font":
+        FontListView()
+    case "SegmentedBar":
+        SegmentedView()
     default:
         EmptyView()
     }

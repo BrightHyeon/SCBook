@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import CoolDownParser
+import CoolDownSwiftUIMapper
 
 struct HIGView: View {
     
@@ -36,11 +38,18 @@ struct HIGView: View {
                 .padding(15)
             }
             
-            Text(hig.markdown) //AttributedString도 StringProtocol을 준수하기에 할당가능.
+            //CoolMarkdown사용하기.
+            CDMarkdownDefaultView(text: hig.description)
+                .environment(\.markdownParserCache, .shared)
                 .font(.subheadline)
-                .multilineTextAlignment(.leading)
-                .lineSpacing(7)
+                .lineSpacing(10)
                 .padding()
+            
+//            Text(hig.markdown) //AttributedString도 StringProtocol을 준수하기에 할당가능.
+//                .font(.subheadline)
+//                .multilineTextAlignment(.leading)
+//                .lineSpacing(7)
+//                .padding()
             
             Spacer().frame(height: 50)
         }

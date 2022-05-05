@@ -1,5 +1,5 @@
 //
-//  TextSizeView.swift
+//  FontSizeView.swift
 //  SCBook
 //
 //  Created by Hyeonsoo Kim on 2022/05/04.
@@ -7,20 +7,20 @@
 
 import SwiftUI
 
-struct TextSizeView: View {
+struct FontSizeView: View {
     var body: some View {
         ScrollView {
             VStack {
+                
                 Text("**iOS Basic Font** : *SF Pro*")
+                Text("Default Font Size : Body")
+                
                 Group {
                     HStack(alignment: .bottom) {
                         Text("Large Title")
                             .font(.largeTitle) //weight default - regular
                         Spacer()
                         Text("34 size")
-                            .font(.largeTitle)
-                        Text("34 size")
-                            .font(.system(.largeTitle, design: .rounded))
                     }
                     .padding()
                     
@@ -109,11 +109,12 @@ struct TextSizeView: View {
                 .padding()
             }
         }
+        .navigationTitle("Font Size")
     }
 }
 
-struct TextSizeView_Previews: PreviewProvider {
+struct FontSizeView_Previews: PreviewProvider {
     static var previews: some View {
-        TextSizeView()
+        FontSizeView()
     }
 }

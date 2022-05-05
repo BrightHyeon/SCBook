@@ -17,7 +17,7 @@ struct HigCellView: View {
             Spacer()
             VStack(alignment: .leading, spacing: 12) {
                 Text(hig.title)
-                    .font(.largeTitle.weight(.bold))
+                    .font(.title.weight(.bold))
                     .matchedGeometryEffect(id: "title", in: namespace)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 Text(hig.subtitle)

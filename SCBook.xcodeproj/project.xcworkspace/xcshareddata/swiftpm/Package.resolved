@@ -1,6 +1,33 @@
 {
   "pins" : [
     {
+      "identity" : "axissegmentedview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jasudev/AxisSegmentedView.git",
+      "state" : {
+        "revision" : "4a9a9c6c5b32b51e5d2fd4c30e8c475658853131",
+        "version" : "0.5.2"
+      }
+    },
+    {
+      "identity" : "cooldown",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/techprimate/CoolDown",
+      "state" : {
+        "branch" : "main",
+        "revision" : "9d8a95e2818c891c3d6288a244220b569defdbf5"
+      }
+    },
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher",
+      "state" : {
+        "revision" : "d06df9adf50ed8cde5786d935836a5f445f780ba",
+        "version" : "6.3.1"
+      }
+    },
+    {
       "identity" : "swiftuix",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SwiftUIX/SwiftUIX",

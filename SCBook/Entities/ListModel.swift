@@ -37,13 +37,13 @@ struct ListModel: Codable {
         let title: String
         let subtitle: String
         let introduce: String
-        private let description: String
-        var markdown: AttributedString {
-            let markdown = try! AttributedString(
-                markdown: description, //markdown적용되도록. 링크 참고: https://blog.eidinger.info/3-surprises-when-using-markdown-in-swiftui
-                options: .init(interpretedSyntax: .inlineOnlyPreservingWhitespace)) //띄어쓰기 \n 먹히도록.
-            return markdown
-        }
+        let description: String
+//        var markdown: AttributedString {
+//            let markdown = try! AttributedString(
+//                markdown: description, //markdown적용되도록. 링크 참고: https://blog.eidinger.info/3-surprises-when-using-markdown-in-swiftui
+//                options: .init(interpretedSyntax: .inlineOnlyPreservingWhitespace)) //띄어쓰기 \n 먹히도록.
+//            return markdown
+//        }
     }
 }
 
