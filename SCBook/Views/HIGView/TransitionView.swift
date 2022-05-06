@@ -34,7 +34,7 @@ struct TransitionView: View {
                         .padding(.horizontal, 20)
                         .id(topID)
                     
-                    if !show {
+                    if !show { //if문으로 분류해야 namespace가 잘 먹힘.
                         HigCellView(hig: hig!, namespace: namespace)
                             .onTapGesture {
                                 withAnimation(.spring(response: 0.6, dampingFraction: 0.6)) {

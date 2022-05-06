@@ -27,6 +27,7 @@ struct CustomLayoutView: View {
             }
             .padding(10)
         }
+        .navigationTitle("Custom Layout")
     }
 }
 

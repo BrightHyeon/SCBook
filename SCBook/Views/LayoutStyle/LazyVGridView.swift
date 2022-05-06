@@ -33,6 +33,7 @@ struct LazyVGridView: View {
                 .padding()
             }
         }
+        .navigationTitle("VGrid&GroupBox")
     }
 }
 

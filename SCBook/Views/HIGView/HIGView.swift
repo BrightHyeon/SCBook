@@ -18,6 +18,7 @@ struct HIGView: View {
     @Binding var show: Bool
     
     var body: some View {
+        
         //        ZStack {
         ScrollView {
             ZStack {
@@ -38,9 +39,14 @@ struct HIGView: View {
                 .padding(15)
             }
             
+            //Markdown과 혼합이 불가능.
+//            let a = partialColorString(all: hig.description, allColor: .primary, partial: "버튼의 기능을", partialColor: .red)
+//            Text(a)
+            
             //CoolMarkdown사용하기.
             CDMarkdownDefaultView(text: hig.description)
-                .environment(\.markdownParserCache, .shared)
+            //잘모르겠지만 이 Cache?환경을 등록하면 돌아왔을 때 글이 삭제되어있음
+//                .environment(\.markdownParserCache, .shared)
                 .font(.subheadline)
                 .lineSpacing(10)
                 .padding()
@@ -102,7 +108,7 @@ struct HIGView: View {
             .overlay(
                 VStack(alignment: .leading, spacing: 12) {
                     Text(hig.title)
-                        .font(.largeTitle.weight(.bold))
+                        .font(.title.weight(.bold))
                         .matchedGeometryEffect(id: "title", in: namespace)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     Text(hig.subtitle)

@@ -56,7 +56,6 @@ struct StepperView: View {
             
         }
         .padding()
-        
     }
 }
 

@@ -37,6 +37,35 @@ struct BackgroundList: View {
                         }
                 }
                 Spacer()
+                
+                NavigationLink {
+                    LoopingPlayer()
+                        .ignoresSafeArea()
+                } label: {
+                    VStack {
+                        Spacer()
+                        Text("LoopingPlayer")
+                            .font(.largeTitle)
+                            .bold()
+                            .foregroundColor(.white)
+                            .minimumScaleFactor(0.7)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(20)
+                            .background(
+                                RoundedRectangle(cornerRadius: 30, style: .continuous)
+                                    .fill(.ultraThinMaterial)
+                                    .blur(radius: 20)
+                            )
+                    }
+                    .background(
+                        LoopingPlayer()
+                    )
+                    .clipShape(
+                        RoundedRectangle(cornerRadius: 30, style: .continuous)
+                    )
+                    .frame(height: 200)
+                    .padding(20)
+                }
             }
             
             //ZStack으로 위에 덮듯이 띄우기.

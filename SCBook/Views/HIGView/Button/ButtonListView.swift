@@ -29,7 +29,7 @@ struct ButtonListView: View {
                 }
             }
         }
-        .navigationTitle("Button Style List")
+        .navigationTitle("Button Style")
         .navigationBarTitleDisplayMode(.inline)
     }
 }
