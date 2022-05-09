@@ -53,6 +53,7 @@ struct SegmentedView: View {
             }
         }
         .padding()
+        .navigationTitle("Styles")
     }
 }
 

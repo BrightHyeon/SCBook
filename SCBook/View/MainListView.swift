@@ -13,13 +13,23 @@ struct MainListView: View {
     @EnvironmentObject var startOnboard: StartOnboard
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     @State private var opacity: Double = 0.0
-
+    @State private var isEditing: Bool = false
     @StateObject var listViewModel = ListViewModel()
     @StateObject var cd = ColorDict()
     @State private var text: String = ""
     @Namespace var topID //위로 한번에 이동하기 위한 용도.
     //이거 관련해서는 따로 NC1_Tamna에 정리하겠음.
 //    @State var proxyMemory:
+    
+    var filteredList: [ListModel] {
+        listViewModel.list.filter { item in
+            if !text.isEmpty {
+                return item.title.lowercased().contains(text.lowercased())
+            } else {
+                return true
+            }
+        }
+    }
     
     var body: some View {
         NavigationView {
@@ -28,8 +38,8 @@ struct MainListView: View {
                     Theme.backgroundStyle(forScheme: colorScheme)
                     ScrollView {
                         VStack {
-                            
-                            SearchBar("Search...", text: $text).padding(.horizontal, 5)
+                            SearchBar("Search...", text: $text)
+                                .padding(.horizontal, 5)
                                 .id(topID)
                                 .overlay(
                                     GeometryReader { proxy -> Color in //Color는 단순히 View return 용도.
@@ -51,7 +61,8 @@ struct MainListView: View {
                             
                             //index와 item을 동시에 빼줄수도있음... 단, Array로 한번더 덮어줘야하나봄.
                             //                        ForEach(Array(listViewModel.list.enumerated()), id: \.offset) { index, item in
-                            ForEach(listViewModel.list, id: \.title) { item in
+//                            ForEach(listViewModel.list, id: \.title) { item in
+                            ForEach(filteredList, id: \.title) { item in
                                 NavigationLink {
                                     //실제 코드적용할 땐 enum case hashig인 애들만 여기로 전송할 것임.
                                     view(hig: item.hig, for: item.isHig)

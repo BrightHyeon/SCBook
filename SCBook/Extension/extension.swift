@@ -1,5 +1,5 @@
 //
-//  Color.swift
+//  extension.swift
 //  SCBook
 //
 //  Created by Hyeonsoo Kim on 2022/05/02.
@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//MARK: Color extension
 extension Color {
     //For Neumorphism
     static let offWhite = Color(red: 225/255, green: 225/255, blue: 235/255)
@@ -16,6 +17,7 @@ extension Color {
     static let darkEnd = Color(red: 25/255, green: 25/255, blue: 30/255)
 }
 
+//MARK: LinearGradient extension
 extension LinearGradient {
     init(_ colors: Color...) { //새로운 초기화 메서드 등록.
         self.init(gradient: Gradient(colors: colors), startPoint: .topLeading, endPoint: .bottomTrailing)

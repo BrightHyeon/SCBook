@@ -60,9 +60,11 @@ struct SCBookApp: App {
  16. 3D effect활용한 Page Transition 구현해보기.
  
  //MARK: 해볼것들
- 17. 붉은 글씨 써보기. HIG.
- 18. HIGCell-> HIGView 전환 때 글씨 깨지는 거 수정하기.
- 19. NavigationTitle안달린것들 달기.
+ 17. 붉은 글씨 써보기. HIG. -> 마크다운과 혼합이 불가능. (기본 마크다운과도~!) -> 마크다운자체가 String local일 때 적용이되는듯허당.
+ 18. HIGCell-> HIGView 전환 때 글씨 깨지는 거 수정하기. -> solve...
+ 19. NavigationTitle안달린것들 달기. -> solve...
+ 20. SearchBar 기능넣기. -> solve...
+ 21. VideoView 넣기. -> solve...
  */
 
 //MARK: 나중에 NC1 끝나고 고찰해봐야할 것 -> 재사용성 측면문제!!!. 단순 @ViewBuilder커스텀뷰, Modifier만이 능사가 아니다!!!. extenstion 및 View 이외의 프로토콜들도 Custom할줄 알아야 일류~!!!

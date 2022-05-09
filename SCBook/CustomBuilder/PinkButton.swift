@@ -26,14 +26,14 @@ struct PinkButton: View {
                 .minimumScaleFactor(0.5)
                 .frame(maxWidth: .infinity)
             Image(systemName: "chevron.right")
-                .font(.title.bold())
+                .font(.body.bold())
                 .foregroundColor(.secondary)
         }
         .padding()
         .background(
             RoundedRectangle(cornerRadius: 10, style: .continuous)
                 .fill(Theme.buttonColor(forScheme: colorScheme))
-                .shadow(color: .white.opacity(0.7), radius: 10, x: -5, y: -5)
+                .shadow(color: colorScheme == .light ? .white.opacity(0.7) : .gray.opacity(0.7), radius: 10, x: -5, y: -5)
                 .shadow(color: .black.opacity(0.2), radius: 10, x: 10, y: 10)
         )
         .padding()

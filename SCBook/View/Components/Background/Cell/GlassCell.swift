@@ -17,7 +17,7 @@ struct GlassCell: View {
         VStack {
             Spacer()
             Text("Glassmorphism")
-                .font(.title)
+                .font(.largeTitle)
                 .bold()
                 .foregroundColor(.white)
                 .minimumScaleFactor(0.7)

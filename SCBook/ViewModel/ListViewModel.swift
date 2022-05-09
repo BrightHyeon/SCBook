@@ -13,6 +13,7 @@ class ListViewModel: ObservableObject {
     
     @Published var list: [ListModel] = loadJson("dummyList.json")
         
+    //고찰 - 이 ViewModel 필요 no. 그냥 MainListView에서 바로 받아도됐음. 데이터의 변화가 생기는 것도 아니기에 단순 상수에 저장해도되는.
 }
 
 func loadJson<T: Decodable>(_ filename: String) -> T {

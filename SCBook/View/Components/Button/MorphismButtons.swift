@@ -149,6 +149,7 @@ struct MorphismButtons: View {
             //이럴경우 1) ScrollView바로 하위(그 안에선 가장 큰 뷰)뷰의 maxWidth를 .infinity로 설정한다.
             //      2) 혹은 VStack을 LazyVStack으로 바꾼다.
         }
+        .navigationTitle("Advanced")
     }
 }
 

@@ -47,6 +47,7 @@ struct TextRotationView: View {
             
             Spacer().frame(height: 100)
         }
+        .navigationTitle("Rotation")
     }
 }
 

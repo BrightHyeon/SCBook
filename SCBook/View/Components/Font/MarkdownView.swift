@@ -174,6 +174,7 @@ Mit Forever Focus™ gibt es nun endlich ein Nahrungsergänzungsmittel, das dir 
             }
             .padding()
         }
+        .navigationTitle("Markdown")
     }
 }
 
