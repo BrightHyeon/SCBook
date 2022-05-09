@@ -5,6 +5,8 @@
 //  Created by Hyeonsoo Kim on 2022/04/27.
 //
 
+//고찰 - Graphic파트 전체 고찰. 여기서 틀을 정해줄때, GeometryReader를 이용하면 보다 다양한 크기의 디바이스에서도 형태 및 위치가 잘 유지될 것으로 보인다.
+
 import SwiftUI
 
 //참고url: https://quassum.github.io/SVG-to-SwiftUI/

@@ -9,6 +9,7 @@ import SwiftUI
 
 //MARK: Question. class말고 더 좋은 관리방법은?
 class ColorDict: ObservableObject {
+    //고찰 - ObservableObject프로토콜을 준수할필요가 전혀없다. 그냥 클래스에 모아두고, 단순변수로 가져다가 써도될듯하다. 또한 열거형으로 하는 것도 간편해보임.
     
     let colors: [String: LinearGradient] = [
     
