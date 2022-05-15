@@ -78,6 +78,8 @@
 		96C2A52628226F1300FC73E3 /* CoolDownSwiftUIMapper in Frameworks */ = {isa = PBXBuildFile; productRef = 96C2A52528226F1300FC73E3 /* CoolDownSwiftUIMapper */; };
 		96C2A52828226F1300FC73E3 /* CoolDownUIMapper in Frameworks */ = {isa = PBXBuildFile; productRef = 96C2A52728226F1300FC73E3 /* CoolDownUIMapper */; };
 		96C2A52A2822793A00FC73E3 /* ReversedInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C2A5292822793A00FC73E3 /* ReversedInt.swift */; };
+		96EC181E2830E417006D550C /* CodeEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EC181D2830E417006D550C /* CodeEditorView.swift */; };
+		96EC18212830E4B6006D550C /* CodeEditorView in Frameworks */ = {isa = PBXBuildFile; productRef = 96EC18202830E4B6006D550C /* CodeEditorView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +169,7 @@
 		96C2A51B28225CDF00FC73E3 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		96C2A51E28225D0C00FC73E3 /* FontSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeView.swift; sourceTree = "<group>"; };
 		96C2A5292822793A00FC73E3 /* ReversedInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversedInt.swift; sourceTree = "<group>"; };
+		96EC181D2830E417006D550C /* CodeEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeEditorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +180,7 @@
 				96C2A52828226F1300FC73E3 /* CoolDownUIMapper in Frameworks */,
 				9693630A2818EE8700D10081 /* SwiftUIX in Frameworks */,
 				96C2A52428226F1300FC73E3 /* CoolDownAttributedString in Frameworks */,
+				96EC18212830E4B6006D550C /* CodeEditorView in Frameworks */,
 				96C2A52628226F1300FC73E3 /* CoolDownSwiftUIMapper in Frameworks */,
 				96C2A52228226F1300FC73E3 /* CoolDown in Frameworks */,
 			);
@@ -267,6 +271,7 @@
 				9688C30F281FAB59002D0314 /* ButtonListView.swift */,
 				96BFF0D428202BEF00E4F1D7 /* BasicButtons.swift */,
 				965176312820D0B5009A121E /* MorphismButtons.swift */,
+				96EC181D2830E417006D550C /* CodeEditorView.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -552,6 +557,7 @@
 				96C2A52328226F1300FC73E3 /* CoolDownAttributedString */,
 				96C2A52528226F1300FC73E3 /* CoolDownSwiftUIMapper */,
 				96C2A52728226F1300FC73E3 /* CoolDownUIMapper */,
+				96EC18202830E4B6006D550C /* CodeEditorView */,
 			);
 			productName = SCBook;
 			productReference = 968A471E28183B4C00491FD6 /* SCBook.app */;
@@ -629,6 +635,7 @@
 				969363082818EE8700D10081 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 				96C2A52028226F1300FC73E3 /* XCRemoteSwiftPackageReference "CoolDown" */,
 				96B0DEDF2822DACD00EF28B5 /* XCRemoteSwiftPackageReference "AxisSegmentedView" */,
+				96EC181F2830E4B6006D550C /* XCRemoteSwiftPackageReference "CodeEditorView" */,
 			);
 			productRefGroup = 968A471F28183B4C00491FD6 /* Products */;
 			projectDirPath = "";
@@ -680,6 +687,7 @@
 				9693632028190C8900D10081 /* Curve.swift in Sources */,
 				96B0FD2A281A80AB001FC040 /* OrangeDraw.swift in Sources */,
 				9667B607281868EE0011C988 /* WaveDraw.swift in Sources */,
+				96EC181E2830E417006D550C /* CodeEditorView.swift in Sources */,
 				9667B604281863790011C988 /* Wave.swift in Sources */,
 				9693632228190D4400D10081 /* CurveDraw.swift in Sources */,
 				96B0307D282298050090AC34 /* FontListView.swift in Sources */,
@@ -1087,6 +1095,14 @@
 				kind = branch;
 			};
 		};
+		96EC181F2830E4B6006D550C /* XCRemoteSwiftPackageReference "CodeEditorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mchakravarty/CodeEditorView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1114,6 +1130,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 96C2A52028226F1300FC73E3 /* XCRemoteSwiftPackageReference "CoolDown" */;
 			productName = CoolDownUIMapper;
+		};
+		96EC18202830E4B6006D550C /* CodeEditorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 96EC181F2830E4B6006D550C /* XCRemoteSwiftPackageReference "CodeEditorView" */;
+			productName = CodeEditorView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
