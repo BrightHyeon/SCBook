@@ -41,9 +41,9 @@ struct MainListView: View {
                             SearchBar("Search...", text: $text)
                                 .padding(.horizontal, 5)
                                 .id(topID)
-                                .overlay(
-                                    GeometryReader { proxy -> Color in //Color는 단순히 View return 용도.
-                                        let offset = proxy.frame(in: .global).minY //frame에 4가지 요소가 있는데 그 중 y축과 관련된 minY.
+                                .overlay( //이 SearchBar가 차지하는 위치.
+                                    GeometryReader { geometry -> Color in //Color는 단순히 View return 용도.
+                                        let offset = geometry.frame(in: .global).minY //frame에 4가지 요소가 있는데 그 중 y축과 관련된 minY.
                                         
                                         if offset < -70 { //proxy값 관찰용.
                                             withAnimation {
